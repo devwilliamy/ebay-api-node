@@ -1,0 +1,953 @@
+
+
+
+<title>Advance Parts - Car Cover - eBay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+
+<style type="text/css">
+    html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        overflow-anchor: none !important;
+    }
+
+    body {
+        font-family: 'Lato';
+        margin: 0;
+        overflow-y: hidden;
+        /* Hide vertical scrollbar */
+        overflow-x: hidden;
+        /* Hide horizontal scrollbar */
+        overflow-anchor: none !important;
+    }
+
+    section {
+        height: auto;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-anchor: none !important;
+        padding: 0 2vw 0 2vw;
+    }
+
+    * {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    .CSSgal {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        /* Or set a fixed height */
+        overflow-anchor: none !important;
+    }
+
+    /* SLIDER */
+
+    .CSSgal .slider {
+        height: 500px;
+        white-space: nowrap;
+        font-size: 0;
+        transition: 0.8s;
+        overflow-anchor: none !important;
+    }
+
+    /* SLIDES */
+
+    .CSSgal .slider>* {
+        font-size: 1rem;
+        display: inline-flex;
+        white-space: normal;
+        vertical-align: top;
+        height: 100%;
+        width: 100%;
+        background: none 50% no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    /* PREV/NEXT, CONTAINERS & ANCHORS */
+
+    .CSSgal .prevNext {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        width: 100%;
+        height: 0;
+        display: none;
+        overflow-anchor: none !important;
+    }
+
+    .CSSgal .prevNext>div+div {
+        visibility: hidden;
+        /* Hide all but first P/N container */
+    }
+
+    .CSSgal .prevNext a {
+        background: #000;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        /* If you want to place numbers */
+        text-align: center;
+        opacity: 0.7;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 0;
+        backdrop-filter: blur(10px);
+    }
+
+    .CSSgal .prevNext a:hover {
+        opacity: 1;
+    }
+
+    .CSSgal .prevNext a+a {
+        left: auto;
+        right: 0;
+    }
+
+    /*SLIDER 2*/
+    .CSSgal .prevNext2 {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        width: 100%;
+        height: 0;
+        display: none;
+        overflow-anchor: none !important;
+    }
+
+    .CSSgal .prevNext2>div+div {
+        visibility: hidden;
+        /* Hide all but first P/N container */
+    }
+
+    .CSSgal .prevNext2 a {
+        background: #000;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        /* If you want to place numbers */
+        text-align: center;
+        opacity: 0.7;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 0;
+        backdrop-filter: blur(10px);
+    }
+
+    .CSSgal .prevNext2 a:hover {
+        opacity: 1;
+    }
+
+    .CSSgal .prevNext2 a+a {
+        left: auto;
+        right: 0;
+    }
+
+    /*SLIDER 3*/
+    .CSSgal .prevNext3 {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        width: 100%;
+        height: 0;
+        display: none;
+        overflow-anchor: none !important;
+    }
+
+    .CSSgal .prevNext3>div+div {
+        visibility: hidden;
+        /* Hide all but first P/N container */
+    }
+
+    .CSSgal .prevNext3 a {
+        background: #000;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        /* If you want to place numbers */
+        text-align: center;
+        opacity: 0.7;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 0;
+        backdrop-filter: blur(10px);
+    }
+
+    .CSSgal .prevNext3 a:hover {
+        opacity: 1;
+    }
+
+    .CSSgal .prevNext3 a+a {
+        left: auto;
+        right: 0;
+    }
+
+    /* NAVIGATION */
+
+    .CSSgal .bullets {
+        position: absolute;
+        z-index: 2;
+        top: 20px;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .CSSgal .bullets>a {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        min-width: 200px;
+        height: auto;
+        line-height: 30px;
+        text-decoration: none;
+        text-align: center;
+        background: #000;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        font-weight: 900;
+        color: #fff;
+        border: #fff solid 2px;
+    }
+
+    .CSSgal .bullets>a+a {
+        background: rgba(255, 255, 255, 0.5);
+        border: #000 solid 2px;
+        color: #000;
+        /* Dim all but first */
+    }
+
+    .CSSgal .bullets>a:hover {
+        background: rgba(255, 255, 255, 0.7) !important;
+    }
+
+    /* NAVIGATION BUTTONS */
+    /* ALL: */
+    .CSSgal>s:target~.bullets>* {
+        background: rgba(255, 255, 255, 1);
+        color: #000;
+        border: #000 solid 2px;
+    }
+
+    /* ACTIVE */
+    #s1:target~.bullets>*:nth-child(1) {
+        background: rgb(0, 0, 0) !important;
+        color: #fff;
+        border: #fff solid 2px;
+    }
+
+    #s2:target~.bullets>*:nth-child(2) {
+        background: rgb(0, 0, 0) !important;
+        color: #fff;
+        border: #fff solid 2px;
+    }
+
+    #s3:target~.bullets>*:nth-child(3) {
+        background: rgb(0, 0, 0) !important;
+        color: #fff;
+        border: #fff solid 2px;
+    }
+
+    #s4:target~.bullets>*:nth-child(1) {
+        background: rgb(0, 0, 0) !important;
+        color: #fff;
+        border: #fff solid 2px;
+    }
+
+    #s5:target~.bullets>*:nth-child(2) {
+        background: rgb(0, 0, 0) !important;
+        color: #fff;
+        border: #fff solid 2px;
+    }
+
+    #s6:target~.bullets>*:nth-child(1) {
+        background: rgb(0, 0, 0) !important;
+        color: #fff;
+        border: #fff solid 2px;
+    }
+
+    #s7:target~.bullets>*:nth-child(2) {
+        background: rgb(0, 0, 0) !important;
+        color: #fff;
+        border: #fff solid 2px;
+    }
+
+    #s8:target~.bullets>*:nth-child(3) {
+        background: rgb(0, 0, 0) !important;
+        color: #fff;
+        border: #fff solid 2px;
+    }
+
+    #s9:target~.bullets>*:nth-child(4) {
+        background: rgb(0, 0, 0) !important;
+        color: #fff;
+        border: #fff solid 2px;
+    }
+
+    #s10:target~.bullets>*:nth-child(5) {
+        background: rgb(0, 0, 0) !important;
+        color: #fff;
+        border: #fff solid 2px;
+    }
+
+    /* More slides? Add here more rules */
+
+    /* PREV/NEXT CONTAINERS VISIBILITY */
+    /* ALL: */
+    .CSSgal>s:target~.prevNext>* {
+        visibility: hidden;
+    }
+
+    /* ACTIVE: */
+    #s1:target~.prevNext>*:nth-child(1) {
+        visibility: visible;
+    }
+
+    #s2:target~.prevNext>*:nth-child(2) {
+        visibility: visible;
+    }
+
+    #s3:target~.prevNext>*:nth-child(3) {
+        visibility: visible;
+    }
+
+    #s4:target~.prevNext2>*:nth-child(1) {
+        visibility: visible;
+    }
+
+    #s5:target~.prevNext2>*:nth-child(2) {
+        visibility: visible;
+    }
+
+    #s6:target~.prevNext3>*:nth-child(1) {
+        visibility: visible;
+    }
+
+    #s7:target~.prevNext3>*:nth-child(2) {
+        visibility: visible;
+    }
+
+    #s8:target~.prevNext3>*:nth-child(3) {
+        visibility: visible;
+    }
+
+    #s9:target~.prevNext3>*:nth-child(4) {
+        visibility: visible;
+    }
+
+    #s10:target~.prevNext3>*:nth-child(5) {
+        visibility: visible;
+    }
+
+    /* Add here more rules for more slides */
+
+    /* SLIDER ANIMATION POSITIONS */
+
+    #s1:target~.slider {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+    }
+
+    #s2:target~.slider {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+    }
+
+    #s3:target~.slider {
+        transform: translateX(-200%);
+        -webkit-transform: translateX(-200%);
+    }
+
+    #s4:target~.slider {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+    }
+
+    #s5:target~.slider {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+    }
+
+    #s6:target~.slider {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+    }
+
+    #s7:target~.slider {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+    }
+
+    #s8:target~.slider {
+        transform: translateX(-200%);
+        -webkit-transform: translateX(-200%);
+    }
+
+    #s9:target~.slider {
+        transform: translateX(-300%);
+        -webkit-transform: translateX(-300%);
+    }
+
+    #s10:target~.slider {
+        transform: translateX(-400%);
+        -webkit-transform: translateX(-400%);
+    }
+
+    /* More slides? Add here more rules */
+
+    .CSSgal {
+        color: #fff;
+        text-align: center;
+    }
+
+    .CSSgal .slider h2 {
+        margin: 0;
+        font-weight: 200;
+        letter-spacing: -0.06em;
+        word-spacing: 0.2em;
+        font-size: 3em;
+    }
+
+    .CSSgal a {
+        border-radius: 30px;
+        margin: 0 3px;
+        color: rgba(0, 0, 0, 0.8);
+        text-decoration: none;
+    }
+
+    div {
+        flex-direction: row;
+        width: 100%
+    }
+
+    .m-left-padding {
+        padding-left: 2vw;
+    }
+
+    .m-right-padding {
+        padding-right: 2vw;
+    }
+
+    .m-top-padding {
+        padding-top: 0vh;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+    .d-top-bottom-padding {
+        padding: 40px 0 40px 0;
+    }
+
+    .d-top-padding {
+        padding-top: 40px;
+    }
+
+    .slider-info {
+        background: #0003;
+        width: auto;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        border-radius: 10px 10px 0 0;
+        backdrop-filter: blur(10px);
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .hide-desktop {
+        display: block;
+    }
+
+    .faq {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .faq>h3 {
+        font-size: 32px;
+        line-height: 1.2em;
+    }
+
+    video {
+        border-radius: 10px;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+
+    @media screen and (max-width:900px) {
+        div {
+            flex-direction: column;
+        }
+
+        .m-left-padding {
+            padding-left: 0vw;
+        }
+
+        .m-right-padding {
+            padding-right: 0vw;
+        }
+
+        .m-top-padding {
+            padding-top: 20px;
+        }
+
+        .d-top-bottom-padding {
+            padding: 20px;
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 0;
+
+        }
+
+        .CSSgal .prevNext {
+            visibility: visible;
+            display: block;
+        }
+
+        .CSSgal .prevNext2 {
+            visibility: visible;
+            display: block;
+        }
+
+        .CSSgal .prevNext3 {
+            visibility: visible;
+            display: block;
+        }
+
+        .bullets {
+            display: none !important;
+        }
+
+        .hide-mobile {
+            display: block;
+        }
+
+        .hide-desktop {
+            display: none;
+        }
+
+        .slider-info {
+            border-radius: 10px 10px 10x 10px !important;
+        }
+
+        .d-top-padding {
+            padding-top: 0px;
+        }
+
+        p {
+            margin: 20px 0 0px 0;
+        }
+
+        h3 {
+            margin: 20px 0 0px 0;
+        }
+    }
+</style>
+<!---VIDEO--->
+<section>
+    <video playsinline="" controls="" style="width:100%" poster="https://www.icarcover.com/pub/ebay/video/poster-mirrors.jpg">
+        <source src="https://www.icarcover.com/pub/ebay/video/Advance%20Parts%2045sec%20Resized%20Final.mp4" alt="car covers">
+    </video>
+</section>
+<!--PROTECTIVE FABRICS-->
+<section>
+    <div style="display: flex; width:100%; justify-content: center; align-items: center; text-align: center;" class="d-top-padding">
+        <h2 style="font-size: 32px; line-height: 1.2em;">Advance Parts Protective Fabrics</h2>
+    </div>
+    <div style="display: flex; width:100%; justify-content:space-between; align-items: flex-start;" class="d-top-bottom-padding">
+        <div style="display:flex; flex-direction: column; justify-content: flex-start;" class="m-right-padding">
+            <img src="https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/outsidev2.jpg" width="100%" height="100%" alt="protective outer poly vinyl blend car cover">
+            <h3 style="margin-bottom:0">Outer Fabric</h3>
+            <h4 style="margin-bottom:0;margin-top:14px">Protective Outer Poly Vinyl Blend</h4>
+            <ul style="">
+                <li>100% Waterproof: Offer protection against rain, snow, and other types of moisture.</li>
+                <li>Breathable: Helps prevent moisture from building up under the cover, which can lead to mold and
+                    mildew.</li>
+                <li>Lightweight: Easy to handle, which makes them convenient to put on and off.</li>
+            </ul>
+        </div>
+        <div style="display:flex; flex-direction: column; justify-content: flex-start;" class="m-left-padding">
+            <img src="https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/Inside-v2.jpg" width="100%" height="100%" alt="protective outer poly vinyl blend car cover">
+            <h3 style="margin-bottom:0">Inner Fabric</h3>
+            <h4 style="margin-bottom:0;margin-top:14px">Soft Inner Non-woven Lining</h4>
+            <ul style="">
+                <li>Scratch Resistant: Gentle on your car's paint, reducing the risk of scratches and abrasions.
+                </li>
+                <li>Breathable: Our inner lining allows air to circulate through the cover, keeping it dry.</li>
+                <li>Durable: Strong enough to withstand the rigors of regular use without tearing or fraying.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--SLIDER 1-->
+<section>
+    <div class="CSSgal">
+
+        <!-- Don't wrap targets in parent -->
+        <s id="s1"></s>
+        <s id="s2"></s>
+        <s id="s3"></s>
+
+        <div class="slider">
+            <div style="background:url(https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/w-mirrors/protect.jpg) no-repeat center center; background-size: cover; border-radius: 10px;">
+                <div class="slider-info">
+                    <h2 class="hide-desktop">Maximize Protection from the Elements</h2>
+                    <h2 class="hide-mobile" style="font-size:1.5rem">Maximize Protection</h2>
+                    <p class="hide-desktop">Try our waterproof all-weather car cover with features like padded
+                        lining and breathable
+                        materials.</p>
+                    <p class="hide-mobile" style="font-size:1.0rem">Try our waterproof all-weather car cover with
+                        features like padded lining
+                        and breathable
+                        materials.</p>
+                </div>
+            </div>
+            <div style="background:url(https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/w-mirrors/experience.jpg) no-repeat center center; background-size: cover; border-radius: 10px;">
+                <div class="slider-info">
+                    <h2 class="hide-desktop">Keep Your Car Looking New</h2>
+                    <h2 class="hide-mobile" style="font-size:1.5rem">New Car Look</h2>
+                    <p class="hide-desktop">Our car covers are not only functional but stylish as well. Choose from
+                        a variety of options.
+                    </p>
+                    <p class="hide-mobile" style="font-size:1.0rem">Keep your car looking new. Our car covers are
+                        not only functional but
+                        stylish as well. Choose from a variety of options.</p>
+                </div>
+            </div>
+            <div style="background:url(https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/w-mirrors/keep.jpg) no-repeat center center; background-size: cover; border-radius: 10px;">
+                <div class="slider-info">
+                    <h2 class="hide-desktop">Innovative Covers for Indoor and Outdoors</h2>
+                    <h2 class="hide-mobile" style="font-size:1.5rem">Innovative</h2>
+                    <p class="hide-desktop">For indoor and outdoor. The ultimate car accessory to keep your vehicle
+                        pristine comes with fitted bumper to bumper
+                        hems.</p>
+                    <p class="hide-mobile" style="font-size:1.0rem">The ultimate car accessory to keep your vehicle
+                        pristine comes with
+                        fitted bumper to bumper
+                        hems.</p>
+                </div>
+            </div>
+        </div>
+        <div class="prevNext">
+            <div><a href="#s3"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M84 108a3.988 3.988 0 0 1-2.828-1.172l-40-40a3.997 3.997 0 0 1 0-5.656l40-40c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656L49.656 64l37.172 37.172a3.997 3.997 0 0 1 0 5.656A3.988 3.988 0 0 1 84 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a><a href="#s2"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M44 108a3.988 3.988 0 0 1-2.828-1.172 3.997 3.997 0 0 1 0-5.656L78.344 64 41.172 26.828c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l40 40a3.997 3.997 0 0 1 0 5.656l-40 40A3.988 3.988 0 0 1 44 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a></div>
+            <div><a href="#s1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M84 108a3.988 3.988 0 0 1-2.828-1.172l-40-40a3.997 3.997 0 0 1 0-5.656l40-40c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656L49.656 64l37.172 37.172a3.997 3.997 0 0 1 0 5.656A3.988 3.988 0 0 1 84 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a><a href="#s3"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M44 108a3.988 3.988 0 0 1-2.828-1.172 3.997 3.997 0 0 1 0-5.656L78.344 64 41.172 26.828c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l40 40a3.997 3.997 0 0 1 0 5.656l-40 40A3.988 3.988 0 0 1 44 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a></div>
+            <div><a href="#s2"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M84 108a3.988 3.988 0 0 1-2.828-1.172l-40-40a3.997 3.997 0 0 1 0-5.656l40-40c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656L49.656 64l37.172 37.172a3.997 3.997 0 0 1 0 5.656A3.988 3.988 0 0 1 84 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a><a href="#s1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M44 108a3.988 3.988 0 0 1-2.828-1.172 3.997 3.997 0 0 1 0-5.656L78.344 64 41.172 26.828c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l40 40a3.997 3.997 0 0 1 0 5.656l-40 40A3.988 3.988 0 0 1 44 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a></div>
+
+        </div>
+        <div class="bullets">
+            <a href="#s1">Protect Your Car In Style</a>
+            <a href="#s2">Experience a Perfect Fit</a>
+            <a href="#s3">Keep Your Car Clean</a>
+        </div>
+
+    </div>
+</section>
+<!--IMAGE ROW-->
+<section>
+    <div style="display: flex; width:100%; justify-content:space-between; align-items: flex-start; padding-bottom:0" class="d-top-bottom-padding">
+        <div style="display:flex; flex-direction: column; justify-content: flex-start;" class="m-right-padding">
+            <img src="https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/cat.jpg" width="100%" height="100%" alt="protective outer poly vinyl blend car cover">
+            <h3 style="margin-bottom:0">Scratchproof Protection Against Pets</h3>
+            <p style="margin-top:14px; margin-bottom:0px;">Our car covers safeguard your vehicle from scratches
+                caused by pets. The full exterior design is
+                scratch-resistant and features a durable outer &amp; middle layer padded with cotton to protect your car
+                from sharp claws. No need to worry about watching over your furry friends with our protective
+                covers.</p>
+        </div>
+        <div style="display:flex; flex-direction: column;justify-content: flex-start;" class="m-left-padding m-top-padding">
+            <img src="https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/inner-outer.jpg" width="100%" height="100%" alt="protective outer poly vinyl blend car cover">
+            <h3 style="margin-bottom:0">Easily Foldable Weatherproof Outer and Soft Inner</h3>
+            <p style="margin-top:14px; margin-bottom:0px;">Our covers offer a multi-layered shield for your vehicle.
+                The outer layer is robust, waterproof, and scratch-resistant, ensuring your car is well protected.
+                The inner layer is made of soft dustproof cotton, providing a gentle touch on your car's surface.
+                All this make it foldable &amp; easy to store.</p>
+        </div>
+    </div>
+</section>
+<!--IMAGE ROW-->
+<section>
+    <div style="display: flex; width:100%; justify-content:space-between; align-items: flex-start" class="d-top-bottom-padding ">
+        <div style="display:flex; flex-direction: column; justify-content: flex-start;" class="m-right-padding">
+            <img src="https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/elastic-hems-v2.jpg" width="100%" height="100%" alt="protective outer poly vinyl blend car cover">
+            <h3 style="margin-bottom:0">Double Stitched Elastic Seams for Fitted Grip</h3>
+            <p style="margin-top:14px; margin-bottom:0px;">This car cover is made from waterproof fabric with
+                stitched seams and elastic hems that tightly grip
+                your vehicle's front and back ends. It fits coupes, sedans, hatchbacks, wagons, providing
+                comprehensive care against heat and storms in all seasons. Guard your car from the elements with
+                iCarcover.</p>
+        </div>
+        <div style="display:flex; flex-direction: column; justify-content: flex-start;" class="m-left-padding m-top-padding">
+            <img src="https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/waterproof-closeup.jpg" width="100%" height="100%" alt="protective outer poly vinyl blend car cover">
+            <h3 style="margin-bottom:0">Top-notch Water Resistant Surface</h3>
+            <p style="margin-top:14px; margin-bottom:0px;">Our waterproof car covers offer superior moisture
+                protection. The mesh-work of thousands of fibers
+                allows for breathability while blocking water, spills, and melted ice from penetrating through.
+                Trust our expertly-made covers to keep your car dry and protected in any situation.</p>
+        </div>
+    </div>
+</section>
+<!--SLIDER 2-->
+<section>
+    <div class="CSSgal m-top-padding">
+
+        <!-- Don't wrap targets in parent -->
+        <s id="s4"></s>
+        <s id="s5"></s>
+        <div class="slider">
+            <div style="background:url(https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/w-mirrors/s4.jpg) no-repeat center center; background-size: cover; border-radius: 10px;">
+                <div class="slider-info">
+                    <h2 class="hide-desktop">No Tools Required</h2>
+                    <h2 class="hide-mobile" style="font-size:1.5rem">No Tools Required</h2>
+                    <p class="hide-desktop">Simply Unfold and Stretch to Fit Each Corner.
+                    </p>
+                    <p class="hide-mobile" style="font-size:1.0rem">Simply Unfold and Stretch to Fit Each Corner.
+                    </p>
+                </div>
+            </div>
+            <div style="background:url(https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/w-mirrors/s5.jpg) no-repeat center center; background-size: cover; border-radius: 10px;">
+                <div class="slider-info">
+                    <h2 class="hide-desktop">40 MPH Wind Resistance</h2>
+                    <h2 class="hide-mobile">40 MPH Wind Resistance</h2>
+                    <p class="hide-desktop" style="font-size:1.5rem">3 Heavy-Duty Nylon Straps Keep your Cover In
+                        Place.</p>
+                    <p class="hide-mobile" style="font-size:1.0rem">3 Heavy-Duty Nylon Straps Keep your Cover In
+                        Place.</p>
+                </div>
+            </div>
+        </div>
+        <div class="prevNext2">
+            <div><a href="#s4"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M84 108a3.988 3.988 0 0 1-2.828-1.172l-40-40a3.997 3.997 0 0 1 0-5.656l40-40c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656L49.656 64l37.172 37.172a3.997 3.997 0 0 1 0 5.656A3.988 3.988 0 0 1 84 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a><a href="#s5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M44 108a3.988 3.988 0 0 1-2.828-1.172 3.997 3.997 0 0 1 0-5.656L78.344 64 41.172 26.828c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l40 40a3.997 3.997 0 0 1 0 5.656l-40 40A3.988 3.988 0 0 1 44 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a></div>
+            <div><a href="#s4"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M84 108a3.988 3.988 0 0 1-2.828-1.172l-40-40a3.997 3.997 0 0 1 0-5.656l40-40c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656L49.656 64l37.172 37.172a3.997 3.997 0 0 1 0 5.656A3.988 3.988 0 0 1 84 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a><a href="#s4"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M44 108a3.988 3.988 0 0 1-2.828-1.172 3.997 3.997 0 0 1 0-5.656L78.344 64 41.172 26.828c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l40 40a3.997 3.997 0 0 1 0 5.656l-40 40A3.988 3.988 0 0 1 44 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a></div>
+
+        </div>
+        <div class="bullets">
+            <a href="#s4">Quick and Easy Install</a>
+            <a href="#s5">Care Free Protection</a>
+        </div>
+
+    </div>
+</section>
+<!--SLIDER 3-->
+<section class="d-top-padding">
+    <div class="CSSgal m-top-padding ">
+
+        <!-- Don't wrap targets in parent -->
+        <s id="s6"></s>
+        <s id="s7"></s>
+        <s id="s8"></s>
+        <s id="s9"></s>
+        <s id="s10"></s>
+        <div class="slider">
+            <div style="background:url(https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/w-mirrors/s6.jpg) no-repeat center center; background-size: cover; border-radius: 10px;">
+                <div class="slider-info hide-mobile">
+                    <h2 class="hide-mobile" style="font-size:1.5rem">100% Waterproof</h2>
+                </div>
+            </div>
+            <div style="background:url(https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/w-mirrors/s7.jpg) no-repeat center center; background-size: cover; border-radius: 10px;">
+                <div class="slider-info hide-mobile">
+                    <h2 class="hide-mobile" style="font-size:1.5rem">100% Snowproof</h2>
+                </div>
+            </div>
+            <div style="background:url(https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/w-mirrors/s8.jpg) no-repeat center center; background-size: cover; border-radius: 10px;">
+                <div class="slider-info hide-mobile">
+                    <h2 class="hide-mobile" style="font-size:1.5rem">100% Windproof</h2>
+                </div>
+            </div>
+            <div style="background:url(https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/w-mirrors/s9.jpg) no-repeat center center; background-size: cover; border-radius: 10px;">
+                <div class="slider-info hide-mobile">
+                    <h2 class="hide-mobile" style="font-size:1.5rem">100% Paint Protection</h2>
+                </div>
+            </div>
+            <div style="background:url(https://www.icarcover.com/pub/ebay/march_2023_listing_imgs/w-mirrors/s10.jpg) no-repeat center center; background-size: cover; border-radius: 10px;">
+                <div class="slider-info hide-mobile">
+                    <h2 class="hide-mobile" style="font-size:1.5rem">100% Fitted</h2>
+                </div>
+            </div>
+        </div>
+        <div class="prevNext3">
+            <div><a href="#s10"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M84 108a3.988 3.988 0 0 1-2.828-1.172l-40-40a3.997 3.997 0 0 1 0-5.656l40-40c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656L49.656 64l37.172 37.172a3.997 3.997 0 0 1 0 5.656A3.988 3.988 0 0 1 84 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a><a href="#s7"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M44 108a3.988 3.988 0 0 1-2.828-1.172 3.997 3.997 0 0 1 0-5.656L78.344 64 41.172 26.828c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l40 40a3.997 3.997 0 0 1 0 5.656l-40 40A3.988 3.988 0 0 1 44 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a></div>
+            <div><a href="#s6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M84 108a3.988 3.988 0 0 1-2.828-1.172l-40-40a3.997 3.997 0 0 1 0-5.656l40-40c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656L49.656 64l37.172 37.172a3.997 3.997 0 0 1 0 5.656A3.988 3.988 0 0 1 84 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a><a href="#s8"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M44 108a3.988 3.988 0 0 1-2.828-1.172 3.997 3.997 0 0 1 0-5.656L78.344 64 41.172 26.828c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l40 40a3.997 3.997 0 0 1 0 5.656l-40 40A3.988 3.988 0 0 1 44 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a></div>
+            <div><a href="#s7"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M84 108a3.988 3.988 0 0 1-2.828-1.172l-40-40a3.997 3.997 0 0 1 0-5.656l40-40c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656L49.656 64l37.172 37.172a3.997 3.997 0 0 1 0 5.656A3.988 3.988 0 0 1 84 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a><a href="#s9"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M44 108a3.988 3.988 0 0 1-2.828-1.172 3.997 3.997 0 0 1 0-5.656L78.344 64 41.172 26.828c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l40 40a3.997 3.997 0 0 1 0 5.656l-40 40A3.988 3.988 0 0 1 44 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a></div>
+            <div><a href="#s8"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M84 108a3.988 3.988 0 0 1-2.828-1.172l-40-40a3.997 3.997 0 0 1 0-5.656l40-40c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656L49.656 64l37.172 37.172a3.997 3.997 0 0 1 0 5.656A3.988 3.988 0 0 1 84 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a><a href="#s10"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M44 108a3.988 3.988 0 0 1-2.828-1.172 3.997 3.997 0 0 1 0-5.656L78.344 64 41.172 26.828c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l40 40a3.997 3.997 0 0 1 0 5.656l-40 40A3.988 3.988 0 0 1 44 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a></div>
+            <div><a href="#s9"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M84 108a3.988 3.988 0 0 1-2.828-1.172l-40-40a3.997 3.997 0 0 1 0-5.656l40-40c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656L49.656 64l37.172 37.172a3.997 3.997 0 0 1 0 5.656A3.988 3.988 0 0 1 84 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a><a href="#s6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M44 108a3.988 3.988 0 0 1-2.828-1.172 3.997 3.997 0 0 1 0-5.656L78.344 64 41.172 26.828c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l40 40a3.997 3.997 0 0 1 0 5.656l-40 40A3.988 3.988 0 0 1 44 108z" fill="#ffffff" data-original="#000000" class=""></path>
+                        </g>
+                    </svg></a></div>
+
+        </div>
+        <div class="bullets">
+            <a href="#s6">100% Waterproof</a>
+            <a href="#s7">100% Snowproof</a>
+            <a href="#s8">100% Windproof</a>
+            <a href="#s9">100% Paint Protection</a>
+            <a href="#s10">100% Fitted</a>
+
+        </div>
+
+    </div>
+</section>
+<!---FAQ--->
+<section>
+    <div class="faq">
+        <h3>FAQ</h3>
+        <p style="font-weight: 900;">1. When will I receive my order?</p>
+        <p>It usually takes us 24 hours to ship, and your parcel will generally arrive between 1-5 business days
+            after shipment. However, you can always track your order using the tracking number given in the
+            confirmation email.</p>
+        <p style="font-weight: 900;">2. Does this cover protect from the Sun?</p>
+        <p>Yes. Our premium car covers guarantee to provide you with 100% protection from the sun’s heat and UV
+            rays. We make sure that your car’s interior temperature is regulated while saving your car’s exterior
+            from getting any kind of damage.</p>
+        <p style="font-weight: 900;">3. Is it safe to leave my car covered outside in heavy rain?</p>
+        <p>Of course! You can always leave your vehicle outdoors during heavy rain with this cover on. Our unique
+            car covers at Advance Parts are built with heavy-duty material to protect your car from extreme and
+            harsh weather conditions like rain, snow, hail, storms, and many more. The strong make not only ensure
+            all-weather protection but also safeguards from abrasion as it comes with a soft cotton inner lining.
+        </p>
+        <p style="font-weight: 900;">4. Can I use your car cover on a windy day?</p>
+        <p>Yes, our premium car covers come with three tie-down straps along the front, middle, and back. They will
+            prevent the car cover from blowing away.</p>
+        <p style="font-weight: 900;">5. How can I track my order?</p>
+        <p>We make sure to send you a FedEx or UPS Tracking number along with the order confirmation email. You can
+            search for the tracking number by simply putting it up on google.com or track it on the FedEx or UPS
+            website. You should be able to see the full information about tracking through any of these mentioned
+            tracking systems.</p>
+        <p style="font-weight: 900;">6. I have an antenna, can the cover still fit?</p>
+        <p>Yes, our cover comes with 2 free antenna patches. To use these patches, you
+            will simply need to place a hole in the correct location on the cover, and then apply the patch in that
+            location. This will provide flawless coverage to your car. If your antenna is removable, we recommend
+            considering this option. It will make covering your car much easier.</p>
+        <p style="font-weight: 900;">7. How many layers does your cover have?</p>
+        <p>Our car cover has the latest single-layer design that comes without the presence of any bonding welds.
+            This gives you all the benefits of a multilayered material unaccompanied by the associated drawbacks.
+            Our distinctive single-layer design tends to form a tighter bond to work together thereby eliminating
+            the risk of material separation. This will further keep your cover working at its optimal level. Much
+            better than multilayered covers!</p>
+        <p style="font-weight: 900;">8. How often should I wash my cover?</p>
+        <p>There is no magic number, but it all depends on the external environments and factors of your car, as
+            well as how you use your cover. If your judgment tells you that your cover is looking a bit dirty, it
+            might be time to wash it! Dirt particles may compromise the effectiveness of the water-resistance of the
+            fabric. When washing, make sure to follow the washing instructions for the car cover you own to ensure
+            its long-lasting durability and protection.</p>
+    </div>
+</section>
+
+
