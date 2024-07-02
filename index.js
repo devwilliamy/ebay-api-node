@@ -1,81 +1,71 @@
-const axios = require("axios");
-const { parseStringPromise } = require("xml2js");
+const axios = require('axios')
+const { parseStringPromise } = require('xml2js')
 
 // Replace with your eBay credentials
-const SANDBOX = false; // Set to false for production
-const CLIENT_ID = SANDBOX
-  ? ""
-  : "";
-const CLIENT_SECRET = SANDBOX
-  ? ""
-  : "";
-const OAUTH_TOKEN =
-  "";
-const appId = "";
-const certId = "";
-const devId = "";
+const SANDBOX = false // Set to false for production
+const CLIENT_ID = SANDBOX ? '' : ''
+const CLIENT_SECRET = SANDBOX ? '' : ''
+const OAUTH_TOKEN = ''
+const appId = ''
+const certId = ''
+const devId = ''
 
-const EBAY_API_BASE_URL = SANDBOX
-  ? "https://api.sandbox.ebay.com"
-  : "https://api.ebay.com";
+const EBAY_API_BASE_URL = SANDBOX ? 'https://api.sandbox.ebay.com' : 'https://api.ebay.com'
 
 const items = [
-  { sku: "test_sku_001", description: "New description for product 1" },
-  { sku: "test_sku_002", description: "New description for product 2" },
-  // Add more items as needed
-];
+	{ sku: 'test_sku_001', description: 'New description for product 1' },
+	{ sku: 'test_sku_002', description: 'New description for product 2' },
+	// Add more items as needed
+]
 
 async function getOAuthToken() {
-  const tokenUrl = `${EBAY_API_BASE_URL}/identity/v1/oauth2/token`;
-  const credentials = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString(
-    "base64"
-  );
-  const headers = {
-    "Content-Type": "application/x-www-form-urlencoded",
-    Authorization: `Basic ${credentials}`,
-  };
-  //   const body = 'grant_type=client_credentials&scope=https://api.ebay.com/oauth/api_scope/sell.inventory';
-  const body =
-    "grant_type=client_credentials&scope=https://api.ebay.com/oauth/api_scope";
+	const tokenUrl = `${EBAY_API_BASE_URL}/identity/v1/oauth2/token`
+	const credentials = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64')
+	const headers = {
+		'Content-Type': 'application/x-www-form-urlencoded',
+		Authorization: `Basic ${credentials}`,
+	}
+	//   const body = 'grant_type=client_credentials&scope=https://api.ebay.com/oauth/api_scope/sell.inventory';
+	const body = 'grant_type=client_credentials&scope=https://api.ebay.com/oauth/api_scope'
 
-  try {
-    const response = await axios.post(tokenUrl, body, { headers });
-    return response.data.access_token;
-  } catch (error) {
-    console.error("Error obtaining OAuth token:", error.response.data);
-  }
+	try {
+		const response = await axios.post(tokenUrl, body, { headers })
+		return response.data.access_token
+	} catch (error) {
+		console.error('Error obtaining OAuth token:', error.response.data)
+	}
 }
 
 async function updateInventoryItem(sku, description, accessToken) {
-  const url = `${EBAY_API_BASE_URL}/sell/inventory/v1/inventory_item/${sku}`;
-  const headers = {
-    "Content-Type": "application/json",
-    Authorization: `Bearer ${accessToken}`,
-  };
-  const payload = {
-    product: {
-      description,
-    },
-  };
+	const url = `${EBAY_API_BASE_URL}/sell/inventory/v1/inventory_item/${sku}`
+	const headers = {
+		'Content-Type': 'application/json',
+		Authorization: `Bearer ${accessToken}`,
+	}
+	const payload = {
+		product: {
+			description,
+		},
+	}
 
-  try {
-    const response = await axios.put(url, payload, { headers });
-    console.log(`Successfully updated SKU: ${sku}`, response.data);
-  } catch (error) {
-    console.error(`Error updating SKU: ${sku}`, error.response.data);
-  }
+	try {
+		const response = await axios.put(url, payload, { headers })
+		console.log(`Successfully updated SKU: ${sku}`, response.data)
+	} catch (error) {
+		console.error(`Error updating SKU: ${sku}`, error.response.data)
+	}
 }
 
 async function bulkUpdateDescriptions() {
-  const accessToken = await getOAuthToken();
-  if (!accessToken) {
-    console.error("Failed to obtain access token");
-    return;
-  }
+	const accessToken = await getOAuthToken()
+	if (!accessToken) {
+		console.error('Failed to obtain access token')
+		return
+	}
 
-  for (const item of items) {
-    await updateInventoryItem(item.sku, item.description, accessToken);
-  }
+	for (const item of items) {
+		await updateInventoryItem(item.sku, item.description, accessToken)
+	}
 }
 /*
         // <RequesterCredentials>
@@ -84,7 +74,7 @@ async function bulkUpdateDescriptions() {
 */
 
 const createProduct = async (product) => {
-  const requestXml = `
+	const requestXml = `
       <?xml version="1.0" encoding="utf-8"?>
       <AddFixedPriceItemRequest xmlns="urn:ebay:apis:eBLBaseComponents">
 
@@ -122,94 +112,72 @@ const createProduct = async (product) => {
           <Site>${product.site}</Site>
         </Item>
       </AddFixedPriceItemRequest>
-    `;
-  try {
-    const response = await axios.post(
-      "https://api.ebay.com/ws/api.dll",
-      requestXml,
-      {
-        headers: {
-          "X-EBAY-API-COMPATIBILITY-LEVEL": "967",
-          //   "X-EBAY-API-DEV-NAME": devId,
-          //   "X-EBAY-API-APP-NAME": appId,
-          //   "X-EBAY-API-CERT-NAME": certId,
-          "X-EBAY-API-CALL-NAME": "AddFixedPriceItem",
-          "X-EBAY-API-SITEID": "0",
-          "X-EBAY-API-IAF-TOKEN": OAUTH_TOKEN,
-          "Content-Type": "text/xml",
-        },
-      }
-    );
+    `
+	try {
+		const response = await axios.post('https://api.ebay.com/ws/api.dll', requestXml, {
+			headers: {
+				'X-EBAY-API-COMPATIBILITY-LEVEL': '967',
+				//   "X-EBAY-API-DEV-NAME": devId,
+				//   "X-EBAY-API-APP-NAME": appId,
+				//   "X-EBAY-API-CERT-NAME": certId,
+				'X-EBAY-API-CALL-NAME': 'AddFixedPriceItem',
+				'X-EBAY-API-SITEID': '0',
+				'X-EBAY-API-IAF-TOKEN': OAUTH_TOKEN,
+				'Content-Type': 'text/xml',
+			},
+		})
 
-    const result = await parseStringPromise(response.data);
-    if (
-      result &&
-      result.AddFixedPriceItemResponse &&
-      result.AddFixedPriceItemResponse.Ack[0] === "Success"
-    ) {
-      console.log(
-        `Product created successfully with ItemID: ${result.AddFixedPriceItemResponse.ItemID[0]}`
-      );
-    } else {
-      console.log("Failed to create product", result);
-    }
-  } catch (error) {
-    console.error("Error creating product:", error.message);
-  }
-};
+		const result = await parseStringPromise(response.data)
+		if (result && result.AddFixedPriceItemResponse && result.AddFixedPriceItemResponse.Ack[0] === 'Success') {
+			console.log(`Product created successfully with ItemID: ${result.AddFixedPriceItemResponse.ItemID[0]}`)
+		} else {
+			console.log('Failed to create product', result)
+		}
+	} catch (error) {
+		console.error('Error creating product:', error.message)
+	}
+}
 
 const getItemDetails = async (itemId) => {
-  const requestXml = `
+	const requestXml = `
       <?xml version="1.0" encoding="utf-8"?>
       <GetItemRequest xmlns="urn:ebay:apis:eBLBaseComponents">
 
         <ItemID>${itemId}</ItemID>
       </GetItemRequest>
-    `;
+    `
 
-  try {
+	try {
+		const response = await axios.post(`${EBAY_API_BASE_URL}/ws/api.dll`, requestXml, {
+			headers: {
+				//   "X-EBAY-API-COMPATIBILITY-LEVEL": "967",
+				//   'X-EBAY-API-DEV-NAME': devId,
+				//   'X-EBAY-API-APP-NAME': appId,
+				//   'X-EBAY-API-CERT-NAME': certId,
+				//   "X-EBAY-API-CALL-NAME": "GetItem",
+				//   "X-EBAY-API-SITEID": "0",
+				'Content-Type': 'text/xml',
+				'X-EBAY-API-SITEID': '0',
+				'X-EBAY-API-COMPATIBILITY-LEVEL': '967',
+				'X-EBAY-API-CALL-NAME': 'GetItem',
+				'X-EBAY-API-IAF-TOKEN': OAUTH_TOKEN,
+			},
+		})
 
-    const response = await axios.post(
-      `${EBAY_API_BASE_URL}/ws/api.dll`,
-      requestXml,
-      {
-        headers: {
-          //   "X-EBAY-API-COMPATIBILITY-LEVEL": "967",
-          //   'X-EBAY-API-DEV-NAME': devId,
-          //   'X-EBAY-API-APP-NAME': appId,
-          //   'X-EBAY-API-CERT-NAME': certId,
-          //   "X-EBAY-API-CALL-NAME": "GetItem",
-          //   "X-EBAY-API-SITEID": "0",
-          "Content-Type": "text/xml",
-          "X-EBAY-API-SITEID": "0",
-          "X-EBAY-API-COMPATIBILITY-LEVEL": "967",
-          "X-EBAY-API-CALL-NAME": "GetItem",
-          "X-EBAY-API-IAF-TOKEN": OAUTH_TOKEN
-        },
-      }
-    );
-
-    const result = await parseStringPromise(response.data);
-    if (
-      result &&
-      result.GetItemResponse &&
-      result.GetItemResponse.Ack[0] === "Success"
-    ) {
-      console.log("Item details retrieved successfully:");
-      console.log(result.GetItemResponse.Item[0]);
-    } else {
-      console.log("Failed to retrieve item details");
-    }
-  } catch (error) {
-    console.error(
-      `Error retrieving item details for item ${itemId}:`,
-      error.message
-    );
-  }
-};
+		const result = await parseStringPromise(response.data)
+		if (result && result.GetItemResponse && result.GetItemResponse.Ack[0] === 'Success') {
+			console.log('Item details retrieved successfully:')
+			console.log(result.GetItemResponse.Item[0])
+		} else {
+			console.log('Failed to retrieve item details')
+		}
+	} catch (error) {
+		console.error(`Error retrieving item details for item ${itemId}:`, error.message)
+	}
+}
 
 const updateFixedPriceItemDescription = async (itemId, newDescription) => {
-  const requestXml = `
+	const requestXml = `
       <?xml version="1.0" encoding="utf-8"?>
       <ReviseFixedPriceItemRequest xmlns="urn:ebay:apis:eBLBaseComponents">
         <Item>
@@ -217,48 +185,89 @@ const updateFixedPriceItemDescription = async (itemId, newDescription) => {
           <Description><![CDATA[${newDescription}]]></Description>
         </Item>
       </ReviseFixedPriceItemRequest>
-    `;
+    `
 
-  try {
-    const response = await axios.post(
-      `${EBAY_API_BASE_URL}/ws/api.dll`,
-      requestXml,
-      {
-        headers: {
-          //   "X-EBAY-API-COMPATIBILITY-LEVEL": "967",
-          //   'X-EBAY-API-DEV-NAME': devId,
-          //   'X-EBAY-API-APP-NAME': appId,
-          //   'X-EBAY-API-CERT-NAME': certId,
-          //   "X-EBAY-API-CALL-NAME": "GetItem",
-          //   "X-EBAY-API-SITEID": "0",
-          "Content-Type": "text/xml",
-          "X-EBAY-API-SITEID": "0",
-          "X-EBAY-API-COMPATIBILITY-LEVEL": "967",
-          "X-EBAY-API-CALL-NAME": "ReviseFixedPriceItem",
-          "X-EBAY-API-IAF-TOKEN": OAUTH_TOKEN,
-        },
-      }
-    );
+	try {
+		const response = await axios.post(`${EBAY_API_BASE_URL}/ws/api.dll`, requestXml, {
+			headers: {
+				//   "X-EBAY-API-COMPATIBILITY-LEVEL": "967",
+				//   'X-EBAY-API-DEV-NAME': devId,
+				//   'X-EBAY-API-APP-NAME': appId,
+				//   'X-EBAY-API-CERT-NAME': certId,
+				//   "X-EBAY-API-CALL-NAME": "GetItem",
+				//   "X-EBAY-API-SITEID": "0",
+				'Content-Type': 'text/xml',
+				'X-EBAY-API-SITEID': '0',
+				'X-EBAY-API-COMPATIBILITY-LEVEL': '967',
+				'X-EBAY-API-CALL-NAME': 'ReviseFixedPriceItem',
+				'X-EBAY-API-IAF-TOKEN': OAUTH_TOKEN,
+			},
+		})
 
-    const result = await parseStringPromise(response.data);
-    if (
-      result &&
-      result.ReviseFixedPriceItemResponse &&
-      result.ReviseFixedPriceItemResponse.Ack[0] === "Success"
-    ) {
-      console.log(`Fixed-price item ${itemId} updated successfully`);
-    } else {
-      console.log(`Failed to update fixed-price item ${itemId}`);
-      console.log(result);
-    }
-  } catch (error) {
-    console.error(`Error updating fixed-price item ${itemId}:`, error.message);
-  }
-};
+		const result = await parseStringPromise(response.data)
+		if (result && result.ReviseFixedPriceItemResponse && result.ReviseFixedPriceItemResponse.Ack[0] === 'Success') {
+			console.log(`Fixed-price item ${itemId} updated successfully`)
+		} else {
+			console.log(`Failed to update fixed-price item ${itemId}`)
+			console.log(result)
+		}
+	} catch (error) {
+		console.error(`Error updating fixed-price item ${itemId}:`, error.message)
+	}
+}
 
-const itemId = "111579932274";
+/**
+ * Documentation Here: https://developer.ebay.com/devzone/xml/docs/reference/ebay/ReviseFixedPriceItem.html
+ * Refer to DeletedField section and Item.VideoDetails.VideoID section
+ * @param {*} itemId ex: Item.VideoDetails.VideoID
+ * @param {*} deletedFieldString
+ *
+ */
+const deleteFieldFixedPriceItem = async (itemId, deletedFieldString) => {
+	const requestXml = `
+<?xml version="1.0" encoding="utf-8"?>
+  <ReviseFixedPriceItemRequest xmlns="urn:ebay:apis:eBLBaseComponents">    
+	<ErrorLanguage>en_US</ErrorLanguage>
+	<WarningLevel>High</WarningLevel>
+	<DeletedField>${deletedFieldString}</DeletedField>
+  <Item>
+    <ItemID>${itemId}</ItemID>
+  </Item>
+</ReviseFixedPriceItemRequest>
+`
 
+	try {
+		const response = await axios.post(`${EBAY_API_BASE_URL}/ws/api.dll`, requestXml, {
+			headers: {
+				//   "X-EBAY-API-COMPATIBILITY-LEVEL": "967",
+				//   'X-EBAY-API-DEV-NAME': devId,
+				//   'X-EBAY-API-APP-NAME': appId,
+				//   'X-EBAY-API-CERT-NAME': certId,
+				//   "X-EBAY-API-CALL-NAME": "GetItem",
+				//   "X-EBAY-API-SITEID": "0",
+				'Content-Type': 'text/xml',
+				'X-EBAY-API-SITEID': '0',
+				'X-EBAY-API-COMPATIBILITY-LEVEL': '967',
+				'X-EBAY-API-CALL-NAME': 'ReviseFixedPriceItem',
+				'X-EBAY-API-IAF-TOKEN': OAUTH_TOKEN,
+			},
+		})
 
+		const result = await parseStringPromise(response.data)
+		if (result && result.ReviseFixedPriceItemResponse && result.ReviseFixedPriceItemResponse.Ack[0] === 'Success') {
+			console.log(`Fixed-price item ${itemId} updated successfully`)
+		} else {
+			console.log(`Failed to update fixed-price item ${itemId}`)
+			console.log(result)
+		}
+	} catch (error) {
+		console.error(`Error updating fixed-price item ${itemId}:`, error.message)
+	}
+}
+
+const itemId = '113735268414'
+// const deleteFieldFixedPriceItem = "Item.VideoDetails"
+const testDeletedFieldString = 'Item.VideoDetails.VideoID'
 const newDescription = `
 <!DOCTYPE html>
       <html
@@ -1090,9 +1099,11 @@ const newDescription = `
           </div >
           
           </html >
-`;
+`
 // createProduct(newProduct);
 // getItemDetails("110554978185");
-updateFixedPriceItemDescription(itemId, newDescription);
-
+// updateFixedPriceItemDescription(itemId, newDescription)
 // bulkUpdateDescriptions();
+
+// TODO: Loop over this with the item IDs list
+deleteFieldFixedPriceItem(itemId, testDeletedFieldString)
