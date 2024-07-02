@@ -1,6 +1,7 @@
 const axios = require('axios')
 const { parseStringPromise } = require('xml2js')
 
+const carWithMirrorItemIds = require('./03-car-with-mirror')
 // Replace with your eBay credentials
 const SANDBOX = false // Set to false for production
 const CLIENT_ID = SANDBOX ? '' : ''
@@ -265,7 +266,7 @@ const deleteFieldFixedPriceItem = async (itemId, deletedFieldString) => {
 	}
 }
 
-const itemId = '113735268414'
+const itemId = '122402401758'
 // const deleteFieldFixedPriceItem = "Item.VideoDetails"
 const testDeletedFieldString = 'Item.VideoDetails.VideoID'
 const newDescription = `
@@ -1105,5 +1106,11 @@ const newDescription = `
 // updateFixedPriceItemDescription(itemId, newDescription)
 // bulkUpdateDescriptions();
 
-// TODO: Loop over this with the item IDs list
-deleteFieldFixedPriceItem(itemId, testDeletedFieldString)
+const runMain = async () => {
+	for (const itemId of carWithMirrorItemIds) {
+		// console.log(itemId)
+		await deleteFieldFixedPriceItem(itemId, testDeletedFieldString)
+	}
+}
+
+runMain()
