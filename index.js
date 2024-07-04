@@ -2,6 +2,15 @@ const axios = require('axios')
 const { parseStringPromise } = require('xml2js')
 
 const carWithMirrorItemIds = require('./03-car-with-mirror')
+const carWithMirrorItemIds2 = require('./03-car-with-mirror round 2')
+const carWithNoMirror = require('./03-car-with-no-mirror')
+const suvWithMirror = require('./03-suv-witih-mirror')
+const suvWithNoMirror = require('./03-suv-witih-no-mirror')
+const truckWithMirror = require('./03-truck-with-mirror')
+const truckWithNoMirror = require('./03-truck-with-no-mirror')
+const carWithNoMirror1 = require('./03-car-with-no-mirror 1-500')
+const carWithNoMirror2 = require('./03-car-with-no-mirror 500-1000')
+const carWithNoMirror3 = require('./03-car-with-no-mirror 1000-1600')
 // Replace with your eBay credentials
 const SANDBOX = false // Set to false for production
 const CLIENT_ID = SANDBOX ? '' : ''
@@ -211,6 +220,7 @@ const updateFixedPriceItemDescription = async (itemId, newDescription) => {
 		} else {
 			console.log(`Failed to update fixed-price item ${itemId}`)
 			console.log(result)
+			console.log(result['Errors'])
 		}
 	} catch (error) {
 		console.error(`Error updating fixed-price item ${itemId}:`, error.message)
@@ -260,13 +270,64 @@ const deleteFieldFixedPriceItem = async (itemId, deletedFieldString) => {
 		} else {
 			console.log(`Failed to update fixed-price item ${itemId}`)
 			console.log(result)
+			console.log(result['Errors'])
 		}
 	} catch (error) {
 		console.error(`Error updating fixed-price item ${itemId}:`, error.message)
 	}
 }
 
-const itemId = '122402401758'
+/**
+ * Use this to update picture details
+ * @param {*} itemId
+ */
+const updatePictureDetailsFixedPriceItem_03CarWithMirror = async (itemId) => {
+	const requestXml = `
+<?xml version="1.0" encoding="utf-8"?>
+  <ReviseFixedPriceItemRequest xmlns="urn:ebay:apis:eBLBaseComponents">    
+	<ErrorLanguage>en_US</ErrorLanguage>
+	<WarningLevel>High</WarningLevel>
+  <Item>
+    <ItemID>${itemId}</ItemID>
+    <PictureDetails>
+      <GalleryType>Gallery</GalleryType>
+      <PictureURL>https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/3EwAAOSwYr5mhfZJ/$_57.JPG?set_id=880000500F</PictureURL>
+      <PictureURL>https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/MKAAAOSwJRNmhfZP/$_57.JPG?set_id=880000500F</PictureURL>
+      <PictureURL>https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VNYAAOSwUWFmhfZR/$_57.JPG?set_id=880000500F</PictureURL>
+      <PictureURL>https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/bEMAAOSwunhmhfZV/$_57.JPG?set_id=880000500F</PictureURL>
+      <PictureURL>https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/xcQAAOSwtYBmhfZU/$_57.JPG?set_id=880000500F</PictureURL>
+      <PictureURL>https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/XcsAAOSwUxNmhfZb/$_57.JPG?set_id=880000500F</PictureURL>
+      <PictureURL>https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/LZsAAOSwVBhmhfZc/$_57.JPG?set_id=880000500F</PictureURL>
+  </PictureDetails>
+  </Item>
+</ReviseFixedPriceItemRequest>
+`
+
+	try {
+		const response = await axios.post(`${EBAY_API_BASE_URL}/ws/api.dll`, requestXml, {
+			headers: {
+				'Content-Type': 'text/xml',
+				'X-EBAY-API-SITEID': '0',
+				'X-EBAY-API-COMPATIBILITY-LEVEL': '967',
+				'X-EBAY-API-CALL-NAME': 'ReviseFixedPriceItem',
+				'X-EBAY-API-IAF-TOKEN': OAUTH_TOKEN,
+			},
+		})
+
+		const result = await parseStringPromise(response.data)
+		if (result && result.ReviseFixedPriceItemResponse && result.ReviseFixedPriceItemResponse.Ack[0] === 'Success') {
+			console.log(`Fixed-price item ${itemId} updated successfully`)
+		} else {
+			console.log(`Failed to update fixed-price item ${itemId}`)
+			console.log(result)
+			console.log(result['Errors'])
+		}
+	} catch (error) {
+		console.error(`Error updating fixed-price item ${itemId}:`, error.message)
+	}
+}
+
+const itemId = '124791685971'
 // const deleteFieldFixedPriceItem = "Item.VideoDetails"
 const testDeletedFieldString = 'Item.VideoDetails.VideoID'
 const newDescription = `
@@ -1106,11 +1167,26 @@ const newDescription = `
 // updateFixedPriceItemDescription(itemId, newDescription)
 // bulkUpdateDescriptions();
 
+// These were the left over errors from removing video URLs
+const leftOver = [125221553836, 111979262384, 125221553836, 111980211005]
+const leftOver2 = [125221553836, 125221553836]
 const runMain = async () => {
 	for (const itemId of carWithMirrorItemIds) {
 		// console.log(itemId)
-		await deleteFieldFixedPriceItem(itemId, testDeletedFieldString)
+		// await deleteFieldFixedPriceItem(itemId, 'Item.VideoDetails.VideoID')
+		await updatePictureDetailsFixedPriceItem_03CarWithMirror(itemId)
 	}
 }
 
 runMain()
+
+/*
+  TODO:
+  125221553836
+  111979262384
+  125221553836
+  111980211005
+  // FRom 03 car no mirror
+  113718733911
+  121875960220
+*/

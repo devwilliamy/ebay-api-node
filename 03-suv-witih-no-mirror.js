@@ -1,0 +1,2 @@
+const suvWithNoMirror = [121968534061, 115014571182, 115018534909, 124927950157, 125245035869]
+module.exports = suvWithNoMirror
