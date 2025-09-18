@@ -1,0 +1,16 @@
+* text eol=crlf
+*.png binary
+*.jpg binary
+*.webp binary
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.mp4 binary
+*.mov binary
+*.pdf binary
+*.webm binary
+*.db binary
