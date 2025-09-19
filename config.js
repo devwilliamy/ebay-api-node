@@ -49,7 +49,7 @@ const config = {
   // Log current environment
   logEnvironment() {
     console.log(`eBay API Environment: ${SANDBOX ? 'SANDBOX' : 'PRODUCTION'}`);
-    console.log(`API Base URL: ${this.EBAY_API_BASE_URL}`);
+    console.log(`API Base URL: ${SANDBOX ? 'https://api.sandbox.ebay.com' : 'https://api.ebay.com'}`);
   }
 };
 
