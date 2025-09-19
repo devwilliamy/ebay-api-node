@@ -16,8 +16,9 @@ const getDateTimeString = () => {
 
 // Generate filenames with datetimestamp
 const dateTimeString = getDateTimeString()
-const errorLogFilename = path.join(__dirname, `error_${dateTimeString}.log`)
-const combinedLogFilename = path.join(__dirname, `combined_${dateTimeString}.log`)
+const extra = "_car15BKGR"
+const errorLogFilename = path.join(__dirname, `error_${dateTimeString}${extra}.log`)
+const combinedLogFilename = path.join(__dirname, `combined_${dateTimeString}${extra}.log`)
 
 // Custom log format
 const logFormat = printf(({ level, message, timestamp }) => {

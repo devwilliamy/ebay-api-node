@@ -461,18 +461,20 @@ const updateItemDescription = async (itemId, newDescription) => {
     const ack = parsed?.ReviseItemResponse?.Ack?.[0];
 
     if (ack === "Success" || ack === "Warning") {
-      console.log(`Item ${itemId} description updated.`);
+      // console.log(`Item ${itemId} description updated.`);
       logger.info(`Item ${itemId} description updated.`);
       return { ok: true, warnings: parsed?.ReviseItemResponse?.Errors };
     } else {
       const errs = parsed?.ReviseItemResponse?.Errors ?? [];
       console.error(`Failed to update item ${itemId}`, errs);
       logger.error(`Failed to update item ${itemId}`, errs);
+      logger.error(`Error details: ${JSON.stringify(parsed?.ReviseItemResponse?.Errors || errs || 'No error details available', null, 2)}`);
       return { ok: false, errors: errs };
     }
   } catch (err) {
     console.error(`Error updating item ${itemId}:`, err?.message || err);
     logger.error(`Error updating item ${itemId}:`, err?.message || err);
+    logger.error(`Exception details: ${JSON.stringify(err, null, 2)}`);
     return { ok: false, error: err?.message || String(err) };
   }
 };
@@ -802,97 +804,113 @@ const runMain = async () => {
   //   for (const itemId of truckMirror_20250918) {
   //     await updateItemDescription(itemId, truck_mirror_03_html_20250918);
   //   }
+  // logger.info(
+  //   `updateItemDescription:truckWithNoMirror_20250918, truck_no_mirror_03_html_20250918`
+  // );
+  // for (const itemId of truckWithNoMirror_20250918) {
+  //   await updateItemDescription(itemId, truck_no_mirror_03_html_20250918);
+  // }
   //#endregion
-    logger.info(
-      `updateItemDescription:truckWithNoMirror_20250918, truck_no_mirror_03_html_20250918`
-    );
-    for (const itemId of truckWithNoMirror_20250918) {
-      await updateItemDescription(itemId, truck_no_mirror_03_html_20250918);
-    }
 
-    logger.info(
-      `updateItemDescription:carMirror07_20250918, car_mirror_07_html_20250918`
-    );
-    for (const itemId of carMirror07_20250918) {
-      await updateItemDescription(itemId, car_mirror_07_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:carMirror07_20250918, car_mirror_07_html_20250918`
+    // );
+    // for (const itemId of carMirror07_20250918) {
+    //   await updateItemDescription(itemId, car_mirror_07_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:carMirror07_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:carNoMirror07_20250918, car_no_mirror_07_html_20250918`
-    );
-    for (const itemId of carNoMirror07_20250918) {
-      await updateItemDescription(itemId, car_no_mirror_07_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:carNoMirror07_20250918, car_no_mirror_07_html_20250918`
+    // );
+    // for (const itemId of carNoMirror07_20250918) {
+    //   await updateItemDescription(itemId, car_no_mirror_07_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:carNoMirror07_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:suvMirror07_20250918, suv_mirror_07_html_20250918`
-    );
-    for (const itemId of suvMirror07_20250918) {
-      await updateItemDescription(itemId, suv_mirror_07_html_20250918);
-    }
+    //#region 20250918 Finished
+    // logger.info(
+    //   `updateItemDescription:suvMirror07_20250918, suv_mirror_07_html_20250918`
+    // );
+    // for (const itemId of suvMirror07_20250918) {
+    //   await updateItemDescription(itemId, suv_mirror_07_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:suvMirror07_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:suvNoMirror07_20250918, suv_no_mirror_07_html_20250918`
-    );
-    for (const itemId of suvNoMirror07_20250918) {
-      await updateItemDescription(itemId, suv_no_mirror_07_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:suvNoMirror07_20250918, suv_no_mirror_07_html_20250918`
+    // );
+    // for (const itemId of suvNoMirror07_20250918) {
+    //   await updateItemDescription(itemId, suv_no_mirror_07_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:suvNoMirror07_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:carMirror10Bk_20250918, car_mirror_10_bk_html_20250918`
-    );
-    for (const itemId of carMirror10Bk_20250918) {
-      await updateItemDescription(itemId, car_mirror_10_bk_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:carMirror10Bk_20250918, car_mirror_10_bk_html_20250918`
+    // );
+    // for (const itemId of carMirror10Bk_20250918) {
+    //   await updateItemDescription(itemId, car_mirror_10_bk_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:carMirror10Bk_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:carNoMirror10Bk_20250918, car_no_mirror_10_bk_html_20250918`
-    );
-    for (const itemId of carNoMirror10Bk_20250918) {
-      await updateItemDescription(itemId, car_no_mirror_10_bk_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:carNoMirror10Bk_20250918, car_no_mirror_10_bk_html_20250918`
+    // );
+    // for (const itemId of carNoMirror10Bk_20250918) {
+    //   await updateItemDescription(itemId, car_no_mirror_10_bk_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:carNoMirror10Bk_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:carMirror10Gr_20250918, car_mirror_10_gr_html_20250918`
-    );
-    for (const itemId of carMirror10Gr_20250918) {
-      await updateItemDescription(itemId, car_mirror_10_gr_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:carMirror10Gr_20250918, car_mirror_10_gr_html_20250918`
+    // );
+    // for (const itemId of carMirror10Gr_20250918) {
+    //   await updateItemDescription(itemId, car_mirror_10_gr_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:carMirror10Gr_20250918 FINISHED`);
+    //#endregion
 
-    logger.info(
-      `updateItemDescription:carNoMirror10Gr_20250918, car_no_mirror_10_gr_html_20250918`
-    );
-    for (const itemId of carNoMirror10Gr_20250918) {
-      await updateItemDescription(itemId, car_no_mirror_10_gr_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:carNoMirror10Gr_20250918, car_no_mirror_10_gr_html_20250918`
+    // );
+    // for (const itemId of carNoMirror10Gr_20250918) {
+    //   await updateItemDescription(itemId, car_no_mirror_10_gr_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:carNoMirror10Gr_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:suvMirror10_20250918, suv_mirror_10_html_20250918`
-    );
-    for (const itemId of suvMirror10_20250918) {
-      await updateItemDescription(itemId, suv_mirror_10_html_20250918);
-    }
+    //#region 20250918 Finished
+    // logger.info(
+    //   `updateItemDescription:suvMirror10_20250918, suv_mirror_10_html_20250918`
+    // );
+    // for (const itemId of suvMirror10_20250918) {
+    //   await updateItemDescription(itemId, suv_mirror_10_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:suvMirror10_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:suvNoMirror10_20250918, suv_no_mirror_10_html_20250918`
-    );
-    for (const itemId of suvNoMirror10_20250918) {
-      await updateItemDescription(itemId, suv_no_mirror_10_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:suvNoMirror10_20250918, suv_no_mirror_10_html_20250918`
+    // );
+    // for (const itemId of suvNoMirror10_20250918) {
+    //   await updateItemDescription(itemId, suv_no_mirror_10_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:suvNoMirror10_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:truckMirror10_20250918, truck_mirror_10_html_20250918`
-    );
-    for (const itemId of truckMirror10_20250918) {
-      await updateItemDescription(itemId, truck_mirror_10_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:truckMirror10_20250918, truck_mirror_10_html_20250918`
+    // );
+    // for (const itemId of truckMirror10_20250918) {
+    //   await updateItemDescription(itemId, truck_mirror_10_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:truckMirror10_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:truckNoMirror10_20250918, truck_no_mirror_10_html_20250918`
-    );
-    for (const itemId of truckNoMirror10_20250918) {
-      await updateItemDescription(itemId, truck_no_mirror_10_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:truckNoMirror10_20250918, truck_no_mirror_10_html_20250918`
+    // );
+    // for (const itemId of truckNoMirror10_20250918) {
+    //   await updateItemDescription(itemId, truck_no_mirror_10_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:truckNoMirror10_20250918 FINISHED`);
+    //#endregion
 
     logger.info(
       `updateItemDescription:carMirror15Bkgr_20250918, car_mirror_15_bkgr_html_20250918`
@@ -900,6 +918,7 @@ const runMain = async () => {
     for (const itemId of carMirror15Bkgr_20250918) {
       await updateItemDescription(itemId, car_mirror_15_bkgr_html_20250918);
     }
+    logger.info(`updateItemDescription:carMirror15Bkgr_20250918 FINISHED`);
 
     logger.info(
       `updateItemDescription:carNoMirror15Bkgr_20250918, car_no_mirror_15_bkgr_html_20250918`
@@ -907,62 +926,73 @@ const runMain = async () => {
     for (const itemId of carNoMirror15Bkgr_20250918) {
       await updateItemDescription(itemId, car_no_mirror_15_bkgr_html_20250918);
     }
+    logger.info(`updateItemDescription:carNoMirror15Bkgr_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:carMirror15Bkrd_20250918, car_mirror_15_bkrd_html_20250918`
-    );
-    for (const itemId of carMirror15Bkrd_20250918) {
-      await updateItemDescription(itemId, car_mirror_15_bkrd_html_20250918);
-    }
+  //#region 20250918 Finished
+    // logger.info(
+    //   `updateItemDescription:carMirror15Bkrd_20250918, car_mirror_15_bkrd_html_20250918`
+    // );
+    // for (const itemId of carMirror15Bkrd_20250918) {
+    //   await updateItemDescription(itemId, car_mirror_15_bkrd_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:carMirror15Bkrd_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:carNoMirror15Bkrd_20250918, car_no_mirror_15_bkrd_html_20250918`
-    );
-    for (const itemId of carNoMirror15Bkrd_20250918) {
-      await updateItemDescription(itemId, car_no_mirror_15_bkrd_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:carNoMirror15Bkrd_20250918, car_no_mirror_15_bkrd_html_20250918`
+    // );
+    // for (const itemId of carNoMirror15Bkrd_20250918) {
+    //   await updateItemDescription(itemId, car_no_mirror_15_bkrd_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:carNoMirror15Bkrd_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:carMirror15Grbk_20250918, car_mirror_15_grbk_html_20250918`
-    );
-    for (const itemId of carMirror15Grbk_20250918) {
-      await updateItemDescription(itemId, car_mirror_15_grbk_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:carMirror15Grbk_20250918, car_mirror_15_grbk_html_20250918`
+    // );
+    // for (const itemId of carMirror15Grbk_20250918) {
+    //   await updateItemDescription(itemId, car_mirror_15_grbk_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:carMirror15Grbk_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:carNoMirror15Grbk_20250918, car_no_mirror_15_grbk_html_20250918`
-    );
-    for (const itemId of carNoMirror15Grbk_20250918) {
-      await updateItemDescription(itemId, car_no_mirror_15_grbk_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:carNoMirror15Grbk_20250918, car_no_mirror_15_grbk_html_20250918`
+    // );
+    // for (const itemId of carNoMirror15Grbk_20250918) {
+    //   await updateItemDescription(itemId, car_no_mirror_15_grbk_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:carNoMirror15Grbk_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:suvMirror15Bkgr_20250918, suv_mirror_15_bkgr_html_20250918`
-    );
-    for (const itemId of suvMirror15Bkgr_20250918) {
-      await updateItemDescription(itemId, suv_mirror_15_bkgr_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:suvMirror15Bkgr_20250918, suv_mirror_15_bkgr_html_20250918`
+    // );
+    // for (const itemId of suvMirror15Bkgr_20250918) {
+    //   await updateItemDescription(itemId, suv_mirror_15_bkgr_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:suvMirror15Bkgr_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:suvNoMirror15Bkgr_20250918, suv_no_mirror_15_bkgr_html_20250918`
-    );
-    for (const itemId of suvNoMirror15Bkgr_20250918) {
-      await updateItemDescription(itemId, suv_no_mirror_15_bkgr_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:suvNoMirror15Bkgr_20250918, suv_no_mirror_15_bkgr_html_20250918`
+    // );
+    // for (const itemId of suvNoMirror15Bkgr_20250918) {
+    //   await updateItemDescription(itemId, suv_no_mirror_15_bkgr_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:suvNoMirror15Bkgr_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:truckMirror15Bkgr_20250918, truck_mirror_15_bkgr_html_20250918`
-    );
-    for (const itemId of truckMirror15Bkgr_20250918) {
-      await updateItemDescription(itemId, truck_mirror_15_bkgr_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:truckMirror15Bkgr_20250918, truck_mirror_15_bkgr_html_20250918`
+    // );
+    // for (const itemId of truckMirror15Bkgr_20250918) {
+    //   await updateItemDescription(itemId, truck_mirror_15_bkgr_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:truckMirror15Bkgr_20250918 FINISHED`);
 
-    logger.info(
-      `updateItemDescription:truckNoMirror15Bkgr_20250918, truck_no_mirror_15_bkgr_html_20250918`
-    );
-    for (const itemId of truckNoMirror15Bkgr_20250918) {
-      await updateItemDescription(itemId, truck_no_mirror_15_bkgr_html_20250918);
-    }
+    // logger.info(
+    //   `updateItemDescription:truckNoMirror15Bkgr_20250918, truck_no_mirror_15_bkgr_html_20250918`
+    // );
+    // for (const itemId of truckNoMirror15Bkgr_20250918) {
+    //   await updateItemDescription(itemId, truck_no_mirror_15_bkgr_html_20250918);
+    // }
+    // logger.info(`updateItemDescription:truckNoMirror15Bkgr_20250918 FINISHED`);
+    //#endregion
   //#region old functions
   // await deleteFieldFixedPriceItem(itemId, "Item.VideoDetails.VideoID");
   // await updatePictureDetailsFixedPriceItem_03CarWithNoMirror(itemId);
