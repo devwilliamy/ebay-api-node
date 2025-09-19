@@ -4,6 +4,7 @@
 const axios = require("axios");
 const { parseStringPromise } = require("xml2js");
 const logger = require("./logger");
+const config = require("./config");
 
 /**********************
   Importing Array of Item IDs
@@ -164,20 +165,23 @@ const truck_no_mirror_15_bkgr_html_20250918 = require("./20250918_html/15-truck-
 const truckNoMirror15Bkgr_20250918 = require("./20250918/15-truck/15-truck-no-mirror-bkgr");
 
 /*********************
-  Ebay Credentials
+  eBay Configuration
 **********************/
-// Replace with your eBay credentials
-const SANDBOX = false; // Set to false for production
-const CLIENT_ID = SANDBOX ? "" : "";
-const CLIENT_SECRET = SANDBOX ? "" : "";
-const OAUTH_TOKEN = "";
-const appId = "";
-const certId = "";
-const devId = "";
+// Load configuration from config module (uses .env file)
+const {
+  SANDBOX,
+  CLIENT_ID,
+  CLIENT_SECRET,
+  OAUTH_TOKEN,
+  DEV_ID,
+  APP_ID,
+  CERT_ID,
+  EBAY_API_BASE_URL,
+  logEnvironment
+} = config;
 
-const EBAY_API_BASE_URL = SANDBOX
-  ? "https://api.sandbox.ebay.com"
-  : "https://api.ebay.com";
+// Log current environment on startup
+logEnvironment();
 
 const items = [
   { sku: "test_sku_001", description: "New description for product 1" },
@@ -292,9 +296,9 @@ const createProduct = async (product) => {
       {
         headers: {
           "X-EBAY-API-COMPATIBILITY-LEVEL": "967",
-          //   "X-EBAY-API-DEV-NAME": devId,
-          //   "X-EBAY-API-APP-NAME": appId,
-          //   "X-EBAY-API-CERT-NAME": certId,
+          //   "X-EBAY-API-DEV-NAME": DEV_ID,
+          //   "X-EBAY-API-APP-NAME": APP_ID,
+          //   "X-EBAY-API-CERT-NAME": CERT_ID,
           "X-EBAY-API-CALL-NAME": "AddFixedPriceItem",
           "X-EBAY-API-SITEID": "0",
           "X-EBAY-API-IAF-TOKEN": OAUTH_TOKEN,
@@ -336,9 +340,9 @@ const getItemDetails = async (itemId) => {
       {
         headers: {
           //   "X-EBAY-API-COMPATIBILITY-LEVEL": "967",
-          //   'X-EBAY-API-DEV-NAME': devId,
-          //   'X-EBAY-API-APP-NAME': appId,
-          //   'X-EBAY-API-CERT-NAME': certId,
+          //   'X-EBAY-API-DEV-NAME': DEV_ID,
+          //   'X-EBAY-API-APP-NAME': APP_ID,
+          //   'X-EBAY-API-CERT-NAME': CERT_ID,
           //   "X-EBAY-API-CALL-NAME": "GetItem",
           //   "X-EBAY-API-SITEID": "0",
           "Content-Type": "text/xml",
@@ -507,9 +511,9 @@ const deleteFieldFixedPriceItem = async (itemId, deletedFieldString) => {
       {
         headers: {
           //   "X-EBAY-API-COMPATIBILITY-LEVEL": "967",
-          //   'X-EBAY-API-DEV-NAME': devId,
-          //   'X-EBAY-API-APP-NAME': appId,
-          //   'X-EBAY-API-CERT-NAME': certId,
+          //   'X-EBAY-API-DEV-NAME': DEV_ID,
+          //   'X-EBAY-API-APP-NAME': APP_ID,
+          //   'X-EBAY-API-CERT-NAME': CERT_ID,
           //   "X-EBAY-API-CALL-NAME": "GetItem",
           //   "X-EBAY-API-SITEID": "0",
           "Content-Type": "text/xml",
