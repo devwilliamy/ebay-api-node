@@ -1,4 +1,4 @@
-const car_no_mirror_03_html = `<!DOCTYPE html>
+const car_no_mirror_07_html = `<!DOCTYPE html>
       <html
         lang="en"
         style="display: flex; flex-direction: column; align-items: center"
@@ -898,8 +898,7 @@ const car_no_mirror_03_html = `<!DOCTYPE html>
 
           </div>
 
-          
           </html >
           `;
 
-module.exports = car_no_mirror_03_html;
+module.exports = car_no_mirror_07_html;

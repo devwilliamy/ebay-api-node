@@ -1,4 +1,4 @@
-const car_mirror_07_html = `     <!DOCTYPE html>
+const car_no_mirror_10_bk_html = `     <!DOCTYPE html>
       <html
         lang="en"
         style="display: flex; flex-direction: column; align-items: center"
@@ -244,6 +244,7 @@ const car_mirror_07_html = `     <!DOCTYPE html>
               width: 100%;
               flex-direction: column;
             }
+           
 
             .dropdownContainer {
               transition: all 0.3s ease;
@@ -275,9 +276,7 @@ const car_mirror_07_html = `     <!DOCTYPE html>
               line-height: 40px;
               font-size: 25px;
               width: 80px;
-              min-width: 80px;
               height: 40px;
-
               text-align: center;
             }
             .qText {
@@ -322,7 +321,7 @@ const car_mirror_07_html = `     <!DOCTYPE html>
           </style>
           <!-- v Mobile Styling v -->
           <style>
-            @media (max-width: 650px) {
+            @media (max-width: 600px) {
               body {
                 -webkit-text-size-adjust: 100%;
                 margin: 15px;
@@ -567,7 +566,6 @@ const car_mirror_07_html = `     <!DOCTYPE html>
                 line-height: 40px;
                 font-size: 20px;
                 width: 40px;
-                min-width: 40px;
                 aspect-ratio: 1/1;
                 text-align: center;
               }
@@ -616,142 +614,146 @@ const car_mirror_07_html = `     <!DOCTYPE html>
         </head>
         <body>
           <div class="videoContainer">
-            <video class="video" autoplay="" controls="" muted="" loop="" playsinline="" preload="auto" src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/advanceparts_final_m.mp4" 
-            poster=""
-            ></video>
+            <video class="video" autoplay="" controls="" muted="" loop="" playsinline="" preload="auto" src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/hero_default_advanceparts.mp4" poster="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/thumbnail-03-10-icarcover.webp"></video>
           </div>
           <section class="highQualitySection">
             <picture class="dynamicImage">
-              <source class="dynamicImage" srcset="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/lifestyle_car_03_m.webp" media="(min-width: 601px)" />
-              <img class="dynamicImage" src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/lifestyle_car_03_m_m.webp" alt="High-Quality Premium Car Cover" />
+              <source class="dynamicImage" srcset="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/bk/a-main-car-10-bk-desktop-no-mirror.webp" media="(min-width: 601px)" />
+              <img class="dynamicImage" src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/bk/a-main-car-10-bk-mobile-no-mirror.webp" alt="High-Quality Premium Car Cover" />
             </picture>
 
             <div class="highQualityBanner indentSection">
-              <h2 class="highQualityHeader">Ultimate Quality Car Cover</h2>
+              <h2 class="highQualityHeader">High-Quality Premium Car Cover</h2>
               <p class="highQualityText">
-               Unmatched All-Weather Protection for Your Car. Rest Easy Knowing Your Vehicle is Safe and Secure. Invest in Quality for Long-Lasting Peace of Mind.
+               Choose our car cover and enjoy unbeatable all-weather protection. No more worries; with our cover, your car's safety is assured. Make one smart purchase for lasting peace of mind.
               </p>
             </div>
             <div class="mobileHighQualityBanner indentSection">
-              <h2 class="highQualityHeader">Ultimate Quality Car Cover</h2>
+              <h2 class="highQualityHeader">High-Quality Premium Car Cover</h2>
               <p class="highQualityText">
-               Unmatched All-Weather Protection for Your Car. Rest Easy Knowing Your Vehicle is Safe and Secure. Invest in Quality for Long-Lasting Peace of Mind.
+               Choose our car cover and enjoy unbeatable all-weather protection. No more worries; with our cover, your car's safety is assured. Make one smart purchase for lasting peace of mind.
               </p>
             </div>
           </section>
 
           <div class="imageSection">
-            <h2 class="subHeader">Superior Guard</h2>
+            <h2 class="subHeader">Superior Protection</h2>
             <picture class="dynamicImage">
-              <source class="dynamicImage" srcset="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/air_m.webp" media="(min-width: 601px)" />
+              <source class="dynamicImage" srcset="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/bk/a-airvent-car-10-bk-desktop-no-mirror.webp" media="(min-width: 601px)" />
               <img
                 class="dynamicImage"
-                src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/air_m_m.webp"
+                src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/bk/a-airvent-car-10-bk-mobile-no-mirror.webp"
                 alt="Keeps You Dry, Breathable by Design"
               />
             </picture>
           </div>
           <div class="ultimateToolkitSection imageSection">
-            <h2 class="subHeader">Enhanced Car Cover Features</h2>
+            <h2 class="subHeader">Ultimate Car Cover Toolkit</h2>
             <div class="toolkitGrid">
               <div class="toolkitGridItem">
-                <img src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/zipper.webp" alt="Side Zipper" class="image" />
-                <h1 class="gridHeader">Access Undercover</h1>
+                <img src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/universal-bk/a-universal-10-bk-1.webp" alt="Specialized Sealing Tape" class="image" />
+                <h1 class="gridHeader">Zero Leaks, Guaranteed</h1>
 
                 <p class="gridDescription">
-                  Side zipper allows easy car entry without removing the cover.
+                  Stay Dry! Our specialized sealing tape is engineered to keep your
+                  car completely dry.
                 </p>
               </div>
               <div class="toolkitGridItem">
-                <img src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/windstrap.webp" alt="Stay-Put Strap" class="image" />
-                <h1 class="gridHeader">Stay-Put Strap</h1>
+                <img src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/universal-bk/a-universal-10-bk-2.webp" alt="Specialized Sealing Tape" class="image" />
+                <h1 class="gridHeader">Stay Visible at Night</h1>
 
                 <p class="gridDescription">
-                  Concerned about high winds? Our strap keeps the cover securely fastened!
+                  Spot Your Car, even in the dark! Our reflective stripe ensures
+                  visibility all night.
                 </p>
               </div>
               <div class="toolkitGridItem">
-                <img src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/reflective%20tape.webp"  alt="Stand Out, Stay Safe"
+                <img src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/universal-bk/a-universal-10-bk-3.webp"  alt="Easy Access Side Zipper"
                 class="image" />
-                <h1 class="gridHeader">Stand Out, Stay Safe</h1>
+                <h1 class="gridHeader">Easy Access Side Zipper</h1>
 
                 <p class="gridDescription">
-                  Easily noticeable at night! Reflective stripe for improved nighttime visibility!
+                  Side zipper opening for quick entry of the car without removing the
+                  cover.
                 </p>
               </div>
               <div class="toolkitGridItem">
-                <img src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/tapeseam.webp" alt="Leak-Proof Promise" class="image" />
-                <h1 class="gridHeader">Leak-Proof Promise</h1>
+                <img src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/universal-bk/a-universal-10-bk-4.webp" alt="Wind-Free Strap" class="image" />
+                <h1 class="gridHeader">Straps Secure at 60 MPH</h1>
 
                 <p class="gridDescription">
-                  Our unique sealing tape guarantees total dryness for your car.
+                  Worried about 60 mph winds? The strap ensures the cover stays in
+                  place!
                 </p>
               </div>
             </div>
           </div>
-          <h2 class="subHeader">Soft Comfort Inside, Dry Protection Outside</h2>
+          <h2 class="subHeader">Stay Dry & Enjoy Soft Touch Fabric</h2>
           <div class="stayDryGrid">
             <div class="stayDryItem">
-              <img src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/softinner.webp" alt="Soft Inner Lining  with Droplets" class="image" />
+              <img src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/universal-bk/a-universal-10-bk-5.webp" alt="Waterproof Material with Droplets" class="image" />
               <div class="stayDryDescriptionContainer">
-                <h2 class="stayDryItemHeader">Soft Inner Lining </h2>
+                <h2 class="stayDryItemHeader">Waterproof Material</h2>
                 <p class="stayDryItemDescription">
-                Protects Paint, Resists the Elements! Experience unmatched comfort and strength with our soft inner fabric.
+                  Keep Your Car Bone-Dry! Our cover is leak-free and acts as a
+                  raincoat for your car.
                 </p>
               </div>
             </div>
             <div class="stayDryItem">
-              <img src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/waterproof.webp" alt="Advanced Waterproof Fabric" class="image" />
+              <img src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/universal-bk/a-universal-10-bk-6.webp" alt="Soft Inner Fabric" class="image" />
               <div class="stayDryDescriptionContainer">
-                <h2 class="stayDryItemHeader">Advanced Waterproof Fabric</h2>
+                <h2 class="stayDryItemHeader">Soft Inner Fabric</h2>
                 <p class="stayDryItemDescription">
-                 Keep Your Car Bone-Dry! Our cover features a durable waterproof coating for extra protection, ensuring no leaks and ultimate rain defense.
+                  Gentle on Paint, Tough on Elements! Enjoy the perfect blend of
+                  comfort and durability.
                 </p>
               </div>
             </div>
           </div>
           <section>
             <!-- .stayDryGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; } -->
-            <h2 class="subHeader">Full Car Protection Package</h2>
+            <h2 class="subHeader">Complete Car Protection Set</h2>
             <div class="protectionGrid">
               <div class="protectionItem">
-                <img src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/package.webp" alt="Waterproof Carrying Bag" class="image" />
+                <img src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/universal-bk/a-universal-10-bk-7.webp" alt="Waterproof Carrying Bag" class="image" />
                 <div class="listContainer">
-                  <h2 class="listTitle">Package Includes Free $20 Value</h2>
+                  <h2 class="listTitle">Package Includes:</h2>
                   <ul>
-                    <li><span>1 Car Cover</span></li>
-                    <li><span>1 Zipped Storage Bag</span></li>
+                    <li><span>1x Car Cover</span></li>
+                    <li><span>1x Zipped Storage Bag</span></li>
                     <li>
-                      <span>3 Windproof Straps: Front, Middle, Rear</span>
+                      <span>3x Windproof Straps for Front, Middle, and Rear</span>
                     </li>
                     <li>
-                      <span>1 Antenna Patch Kit / 1 Pair of Grommets</span>
+                      <span>1x Antenna Patch Kit / 1x Pair of Grommets</span>
                     </li>
-                    <li><span>1 Instructions</span></li>
+                    <li><span>1x Instructions</span></li>
                   </ul>
                 </div>
               </div>
               <div class="protectionItem">
-                <img class="image" src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/windstrap%20instruction.webp" alt="All-Weather Strap" />
+                <img class="image" src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/03/universal-gr/a-universal-gr-8.webp" alt="All-Weather Strap" />
                 <div class="listContainer">
-                  <h2 class="listTitle">How to Use the All-Weather Strap</h2>
+                  <h2 class="listTitle">Instructions for All-Weather Strap:</h2>
                   <ul style="list-style: decimal; margin: 0">
                     <li class="numberListItem">
-                      <span> Attach the buckles on either side of the car cover. </span>
+                      <span> Clip the buckles on each side of the car cover. </span>
                     </li>
                     <li class="numberListItem">
-                      <span>Adjust the strap for a secure fit.</span>
+                      <span> Tighten the strap to fit your car securely. </span>
                     </li>
                     <li class="numberListItem">
                       <span>
-                        Repeat the process for the front, middle, and rear areas.
+                        Repeat this process for the front, middle, and rear sections.
                       </span>
                     </li>
                     <li class="numberListItem">
-                      <span> Verify that all straps are fastened securely. </span>
+                      <span> Double-check to confirm all straps are secure. </span>
                     </li>
                     <li class="numberListItem">
-                      <span> Ensure the cover fits snugly. </span>
+                      <span> Inspect for a snug fit. </span>
                     </li>
                   </ul>
                 </div>
@@ -760,17 +762,15 @@ const car_mirror_07_html = `     <!DOCTYPE html>
           </section>
 
           <picture class="dynamicImage">
-            <source class="dynamicImage" srcset="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/antiproof_m.webp" media="(min-width: 601px)" />
+            <source class="dynamicImage" srcset="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/bk/a-weatherproof-car-10-bk-desktop-no-mirror.webp" media="(min-width: 601px)" />
             <img
               class="dynamicImage waterproofSnowproof"
-              src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/antiproof_m_m.webp
-"
+              src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/bk/a-weatherproof-car-10-bk-mobile-no-mirror.webp"
               alt="Waterproof Snowproof Dustproof Windproof Anti-UV Checks"
             />
           </picture>
           <!-- ADD DROPDOWNS HERE -->
           <div id="QAContainer" class="QAContainer">  
-
             <div class="dropdownContainer">
               <span class="qBoxContainer">
                 <div class="qBox">Q</div>
@@ -778,18 +778,7 @@ const car_mirror_07_html = `     <!DOCTYPE html>
               </span>
               <span class="aBoxContainer">
                 <div class="aBox">A</div>
-                <p class="aText">If you're looking for the best on the market, this is the one. Designed to withstand rain, sun, and dust, it keeps your car in pristine condition for years. It's a must-have for long-lasting car protection.</p>
-              </span>
-            </div>
-
-            <div class="dropdownContainer">
-              <span class="qBoxContainer">
-                <div class="qBox">Q</div>
-                <p class="qText">How many layers does your car cover have?</p>
-              </span>
-              <span class="aBoxContainer">
-                <div class="aBox">A</div>
-                <p class="aText">Our car cover features a cutting-edge single-layer design without bonding welds. This design provides all the benefits of multilayered materials without the drawbacks. It forms a tight bond, eliminating the risk of material separation and ensuring optimal performance.</p>
+                <p class="aText">Consider it the ultimate shield for your car. It's engineered to fight off rain, sun, and dust, keeping your car in pristine condition for years. A must-have for long-lasting car care!</p>
               </span>
             </div>
 
@@ -800,7 +789,18 @@ const car_mirror_07_html = `     <!DOCTYPE html>
               </span>
               <span class="aBoxContainer">
                 <div class="aBox">A</div>
-                <p class="aText">In addition to weather protection, it guards against bird droppings and tree sap. The design also prevents moisture buildup, ensuring top-tier care for your car.</p>
+                <p class="aText">Beyond weather protection, our cover also guards against bird droppings and tree sap. Its breathable design prevents moisture buildup, ensuring top-tier care for your car.</p>
+              </span>
+            </div>
+
+            <div class="dropdownContainer">
+              <span class="qBoxContainer">
+                <div class="qBox">Q</div>
+                <p class="qText">Is putting this cover on a hassle?</p>
+              </span>
+              <span class="aBoxContainer">
+                <div class="aBox">A</div>
+                <p class="aText">Not at all! Our cover is designed for hassle-free application and removal, offering straightforward protection for your vehicle.</p>
               </span>
             </div>
 
@@ -811,7 +811,7 @@ const car_mirror_07_html = `     <!DOCTYPE html>
               </span>
               <span class="aBoxContainer">
                 <div class="aBox">A</div>
-                <p class="aText">Our car covers are meticulously designed to ensure a precise fit, providing ultimate protection for your vehicle.</p>
+                <p class="aText">You've found the right one! Our car cover is specially designed to offer a precise fit and ultimate protection for your vehicle.</p>
               </span>
             </div>
 
@@ -822,11 +822,10 @@ const car_mirror_07_html = `     <!DOCTYPE html>
               </span>
               <span class="aBoxContainer">
                 <div class="aBox">A</div>
-                <p class="aText">No worries! Your satisfaction is our top priority. If you're not completely satisfied, we offer a 30-day return policy and a full money-back guarantee. Shop with confidence!</p>
+                <p class="aText">No worries! We prioritize your happiness. If you're not completely satisfied, you're covered by our 30-day return policy. Shop with confidence!</p>
               </span>
             </div>
-
-            <div class="dropdownContainer">
+           <div class="dropdownContainer">
               <span class="qBoxContainer">
                 <div class="qBox">Q</div>
                 <p class="qText">Is it safe to leave my car covered outside in heavy rain?</p>
@@ -869,7 +868,7 @@ const car_mirror_07_html = `     <!DOCTYPE html>
                 <p class="aText">We offer same-day shipping for orders placed by 2 pm PST. Your item will typically arrive within 1-5 business days after it ships.</p>
               </span>
             </div>
-    <div class="dropdownContainer">
+<div class="dropdownContainer">
               <span class="qBoxContainer">
                 <div class="qBox">Q</div>
                 <p class="qText">What the Warranty Covers</p>
@@ -898,9 +897,7 @@ const car_mirror_07_html = `     <!DOCTYPE html>
           </p></span></div>
 
           </div>
-
-          
           </html >
 `;
 
-module.exports = car_mirror_07_html;
+module.exports = car_no_mirror_10_bk_html;

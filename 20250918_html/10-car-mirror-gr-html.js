@@ -1,4 +1,4 @@
-const car_mirror_07_html = `     <!DOCTYPE html>
+const car_mirror_10_gr_html = `      <!DOCTYPE html>
       <html
         lang="en"
         style="display: flex; flex-direction: column; align-items: center"
@@ -622,8 +622,8 @@ const car_mirror_07_html = `     <!DOCTYPE html>
           </div>
           <section class="highQualitySection">
             <picture class="dynamicImage">
-              <source class="dynamicImage" srcset="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/lifestyle_car_03_m.webp" media="(min-width: 601px)" />
-              <img class="dynamicImage" src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/lifestyle_car_03_m_m.webp" alt="High-Quality Premium Car Cover" />
+              <source class="dynamicImage" srcset="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/gr/a-main-car-10-desktop-mirror.webp" media="(min-width: 601px)" />
+              <img class="dynamicImage" src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/gr/a-main-car-10-mobile-mirror.webp" alt="High-Quality Premium Car Cover" />
             </picture>
 
             <div class="highQualityBanner indentSection">
@@ -643,10 +643,10 @@ const car_mirror_07_html = `     <!DOCTYPE html>
           <div class="imageSection">
             <h2 class="subHeader">Superior Guard</h2>
             <picture class="dynamicImage">
-              <source class="dynamicImage" srcset="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/air_m.webp" media="(min-width: 601px)" />
+              <source class="dynamicImage" srcset="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/gr/a-airvent-car-10-desktop-mirror.webp" media="(min-width: 601px)" />
               <img
                 class="dynamicImage"
-                src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/air_m_m.webp"
+                src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/gr/a-airvent-car-10-mobile-mirror.webp"
                 alt="Keeps You Dry, Breathable by Design"
               />
             </picture>
@@ -760,11 +760,10 @@ const car_mirror_07_html = `     <!DOCTYPE html>
           </section>
 
           <picture class="dynamicImage">
-            <source class="dynamicImage" srcset="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/antiproof_m.webp" media="(min-width: 601px)" />
+            <source class="dynamicImage" srcset="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/gr/a-weatherproof-car-10-desktop-mirror.webp" media="(min-width: 601px)" />
             <img
               class="dynamicImage waterproofSnowproof"
-              src="https://advanceparts.sfo3.cdn.digitaloceanspaces.com/ebay/car_03_description/antiproof_m_m.webp
-"
+              src="https://icarcover.sfo3.cdn.digitaloceanspaces.com/ebay/desc/car/10/gr/a-weatherproof-car-10-mobile-mirror.webp"
               alt="Waterproof Snowproof Dustproof Windproof Anti-UV Checks"
             />
           </picture>
@@ -869,7 +868,7 @@ const car_mirror_07_html = `     <!DOCTYPE html>
                 <p class="aText">We offer same-day shipping for orders placed by 2 pm PST. Your item will typically arrive within 1-5 business days after it ships.</p>
               </span>
             </div>
-    <div class="dropdownContainer">
+<div class="dropdownContainer">
               <span class="qBoxContainer">
                 <div class="qBox">Q</div>
                 <p class="qText">What the Warranty Covers</p>
@@ -903,4 +902,4 @@ const car_mirror_07_html = `     <!DOCTYPE html>
           </html >
 `;
 
-module.exports = car_mirror_07_html;
+module.exports = car_mirror_10_gr_html;

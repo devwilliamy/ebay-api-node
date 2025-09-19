@@ -75,19 +75,93 @@ const truckMirror_20250918 = require("./20250918/03-truck/03-truck-mirror");
 const truck_no_mirror_03_html_20250918 = require("./20250918_html/03-truck-no-mirror-html");
 const truckWithNoMirror_20250918 = require("./20250918/03-truck/03-truck-no-mirror");
 
-// - [ ] 07 Car Mirror
-// - [ ] 07 Car No Mirror
-// - [ ] 10 Car Mirror BK
-// - [ ] 10 Car No Mirror BK
-// - [ ] 10 Car Mirror GR
-// - [ ] 10 Car No Mirror GR
-// - [ ] 10 SUV Mirror
-// - [ ] 10 SUV No Mirror
-// - [ ] 10 Truck Mirror
-// - [ ] 15 Car Mirror BKGR
-// - [ ] 15 Car No Mirror BKGR
-// - [ ] 15 SUV Mirror BKGR
-// - [ ] 15 Truck Mirror BKGR
+// 07 Car Mirror
+const car_mirror_07_html_20250918 = require("./20250918_html/07-car-mirror-html");
+const carMirror07_20250918 = require("./20250918/07-car/07-car-mirror");
+
+// 07 Car No Mirror
+const car_no_mirror_07_html_20250918 = require("./20250918_html/07-car-no-mirror-html");
+const carNoMirror07_20250918 = require("./20250918/07-car/07-car-no-mirror");
+
+// 07 SUV Mirror
+const suv_mirror_07_html_20250918 = require("./20250918_html/07-suv-mirror-html");
+const suvMirror07_20250918 = require("./20250918/07-suv/07-suv-mirror");
+
+// 07 SUV No Mirror
+const suv_no_mirror_07_html_20250918 = require("./20250918_html/07-suv-no-mirror-html");
+const suvNoMirror07_20250918 = require("./20250918/07-suv/07-suv-no-mirror");
+
+// 10 Car Mirror BK
+const car_mirror_10_bk_html_20250918 = require("./20250918_html/10-car-mirror-bk-html");
+const carMirror10Bk_20250918 = require("./20250918/10-car/10-car-mirror-bk");
+
+// 10 Car No Mirror BK
+const car_no_mirror_10_bk_html_20250918 = require("./20250918_html/10-car-no-mirror-bk-html");
+const carNoMirror10Bk_20250918 = require("./20250918/10-car/10-car-no-mirror-bk");
+
+// 10 Car Mirror GR
+const car_mirror_10_gr_html_20250918 = require("./20250918_html/10-car-mirror-gr-html");
+const carMirror10Gr_20250918 = require("./20250918/10-car/10-car-mirror-gr");
+
+// 10 Car No Mirror GR
+const car_no_mirror_10_gr_html_20250918 = require("./20250918_html/10-car-no-mirror-gr-html");
+const carNoMirror10Gr_20250918 = require("./20250918/10-car/10-car-no-mirror-gr");
+
+// 10 SUV Mirror
+const suv_mirror_10_html_20250918 = require("./20250918_html/10-suv-mirror-html");
+const suvMirror10_20250918 = require("./20250918/10-suv/10-suv-mirror");
+
+// 10 SUV No Mirror
+const suv_no_mirror_10_html_20250918 = require("./20250918_html/10-suv-no-mirror-html");
+const suvNoMirror10_20250918 = require("./20250918/10-suv/10-suv-no-mirror");
+
+// 10 Truck Mirror
+const truck_mirror_10_html_20250918 = require("./20250918_html/10-truck-mirror-html");
+const truckMirror10_20250918 = require("./20250918/10-truck/10-truck-mirror");
+
+// 10 Truck No Mirror
+const truck_no_mirror_10_html_20250918 = require("./20250918_html/10-truck-no-mirror-html");
+const truckNoMirror10_20250918 = require("./20250918/10-truck/10-truck-no-mirror");
+
+// 15 Car Mirror BKGR
+const car_mirror_15_bkgr_html_20250918 = require("./20250918_html/15-car-mirror-bkgr-html");
+const carMirror15Bkgr_20250918 = require("./20250918/15-car/15-car-mirror-bkgr");
+
+// 15 Car No Mirror BKGR
+const car_no_mirror_15_bkgr_html_20250918 = require("./20250918_html/15-car-no-mirror-bkgr-html");
+const carNoMirror15Bkgr_20250918 = require("./20250918/15-car/15-car-no-mirror-bkgr");
+
+// 15 Car Mirror BKRD
+const car_mirror_15_bkrd_html_20250918 = require("./20250918_html/15-car-mirror-bkrd-html");
+const carMirror15Bkrd_20250918 = require("./20250918/15-car/15-car-mirror-bkrd");
+
+// 15 Car No Mirror BKRD
+const car_no_mirror_15_bkrd_html_20250918 = require("./20250918_html/15-car-no-mirror-bkrd-html");
+const carNoMirror15Bkrd_20250918 = require("./20250918/15-car/15-car-no-mirror-bkrd");
+
+// 15 Car Mirror GRBK
+const car_mirror_15_grbk_html_20250918 = require("./20250918_html/15-car-mirror-grbk-html");
+const carMirror15Grbk_20250918 = require("./20250918/15-car/15-car-mirror-grbk");
+
+// 15 Car No Mirror GRBK
+const car_no_mirror_15_grbk_html_20250918 = require("./20250918_html/15-car-no-mirror-grbk-html");
+const carNoMirror15Grbk_20250918 = require("./20250918/15-car/15-car-no-mirror-grbk");
+
+// 15 SUV Mirror BKGR
+const suv_mirror_15_bkgr_html_20250918 = require("./20250918_html/15-suv-mirror-bkgr-html");
+const suvMirror15Bkgr_20250918 = require("./20250918/15-suv/15-suv-mirror-bkgr");
+
+// 15 SUV No Mirror BKGR
+const suv_no_mirror_15_bkgr_html_20250918 = require("./20250918_html/15-suv-no-mirror-bkgr-html");
+const suvNoMirror15Bkgr_20250918 = require("./20250918/15-suv/15-suv-no-mirror-bkgr");
+
+// 15 Truck Mirror BKGR
+const truck_mirror_15_bkgr_html_20250918 = require("./20250918_html/15-truck-mirror-bkgr-html");
+const truckMirror15Bkgr_20250918 = require("./20250918/15-truck/15-truck-mirror-bkgr");
+
+// 15 Truck No Mirror BKGR
+const truck_no_mirror_15_bkgr_html_20250918 = require("./20250918_html/15-truck-no-mirror-bkgr-html");
+const truckNoMirror15Bkgr_20250918 = require("./20250918/15-truck/15-truck-no-mirror-bkgr");
 
 /*********************
   Ebay Credentials
@@ -729,12 +803,166 @@ const runMain = async () => {
   //     await updateItemDescription(itemId, truck_mirror_03_html_20250918);
   //   }
   //#endregion
-  logger.info(
-    `updateItemDescription:truckWithNoMirror_20250918, truck_no_mirror_03_html_20250918`
-  );
-  for (const itemId of truckWithNoMirror_20250918) {
-    await updateItemDescription(itemId, truck_no_mirror_03_html_20250918);
-  }
+    logger.info(
+      `updateItemDescription:truckWithNoMirror_20250918, truck_no_mirror_03_html_20250918`
+    );
+    for (const itemId of truckWithNoMirror_20250918) {
+      await updateItemDescription(itemId, truck_no_mirror_03_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:carMirror07_20250918, car_mirror_07_html_20250918`
+    );
+    for (const itemId of carMirror07_20250918) {
+      await updateItemDescription(itemId, car_mirror_07_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:carNoMirror07_20250918, car_no_mirror_07_html_20250918`
+    );
+    for (const itemId of carNoMirror07_20250918) {
+      await updateItemDescription(itemId, car_no_mirror_07_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:suvMirror07_20250918, suv_mirror_07_html_20250918`
+    );
+    for (const itemId of suvMirror07_20250918) {
+      await updateItemDescription(itemId, suv_mirror_07_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:suvNoMirror07_20250918, suv_no_mirror_07_html_20250918`
+    );
+    for (const itemId of suvNoMirror07_20250918) {
+      await updateItemDescription(itemId, suv_no_mirror_07_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:carMirror10Bk_20250918, car_mirror_10_bk_html_20250918`
+    );
+    for (const itemId of carMirror10Bk_20250918) {
+      await updateItemDescription(itemId, car_mirror_10_bk_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:carNoMirror10Bk_20250918, car_no_mirror_10_bk_html_20250918`
+    );
+    for (const itemId of carNoMirror10Bk_20250918) {
+      await updateItemDescription(itemId, car_no_mirror_10_bk_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:carMirror10Gr_20250918, car_mirror_10_gr_html_20250918`
+    );
+    for (const itemId of carMirror10Gr_20250918) {
+      await updateItemDescription(itemId, car_mirror_10_gr_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:carNoMirror10Gr_20250918, car_no_mirror_10_gr_html_20250918`
+    );
+    for (const itemId of carNoMirror10Gr_20250918) {
+      await updateItemDescription(itemId, car_no_mirror_10_gr_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:suvMirror10_20250918, suv_mirror_10_html_20250918`
+    );
+    for (const itemId of suvMirror10_20250918) {
+      await updateItemDescription(itemId, suv_mirror_10_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:suvNoMirror10_20250918, suv_no_mirror_10_html_20250918`
+    );
+    for (const itemId of suvNoMirror10_20250918) {
+      await updateItemDescription(itemId, suv_no_mirror_10_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:truckMirror10_20250918, truck_mirror_10_html_20250918`
+    );
+    for (const itemId of truckMirror10_20250918) {
+      await updateItemDescription(itemId, truck_mirror_10_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:truckNoMirror10_20250918, truck_no_mirror_10_html_20250918`
+    );
+    for (const itemId of truckNoMirror10_20250918) {
+      await updateItemDescription(itemId, truck_no_mirror_10_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:carMirror15Bkgr_20250918, car_mirror_15_bkgr_html_20250918`
+    );
+    for (const itemId of carMirror15Bkgr_20250918) {
+      await updateItemDescription(itemId, car_mirror_15_bkgr_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:carNoMirror15Bkgr_20250918, car_no_mirror_15_bkgr_html_20250918`
+    );
+    for (const itemId of carNoMirror15Bkgr_20250918) {
+      await updateItemDescription(itemId, car_no_mirror_15_bkgr_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:carMirror15Bkrd_20250918, car_mirror_15_bkrd_html_20250918`
+    );
+    for (const itemId of carMirror15Bkrd_20250918) {
+      await updateItemDescription(itemId, car_mirror_15_bkrd_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:carNoMirror15Bkrd_20250918, car_no_mirror_15_bkrd_html_20250918`
+    );
+    for (const itemId of carNoMirror15Bkrd_20250918) {
+      await updateItemDescription(itemId, car_no_mirror_15_bkrd_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:carMirror15Grbk_20250918, car_mirror_15_grbk_html_20250918`
+    );
+    for (const itemId of carMirror15Grbk_20250918) {
+      await updateItemDescription(itemId, car_mirror_15_grbk_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:carNoMirror15Grbk_20250918, car_no_mirror_15_grbk_html_20250918`
+    );
+    for (const itemId of carNoMirror15Grbk_20250918) {
+      await updateItemDescription(itemId, car_no_mirror_15_grbk_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:suvMirror15Bkgr_20250918, suv_mirror_15_bkgr_html_20250918`
+    );
+    for (const itemId of suvMirror15Bkgr_20250918) {
+      await updateItemDescription(itemId, suv_mirror_15_bkgr_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:suvNoMirror15Bkgr_20250918, suv_no_mirror_15_bkgr_html_20250918`
+    );
+    for (const itemId of suvNoMirror15Bkgr_20250918) {
+      await updateItemDescription(itemId, suv_no_mirror_15_bkgr_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:truckMirror15Bkgr_20250918, truck_mirror_15_bkgr_html_20250918`
+    );
+    for (const itemId of truckMirror15Bkgr_20250918) {
+      await updateItemDescription(itemId, truck_mirror_15_bkgr_html_20250918);
+    }
+
+    logger.info(
+      `updateItemDescription:truckNoMirror15Bkgr_20250918, truck_no_mirror_15_bkgr_html_20250918`
+    );
+    for (const itemId of truckNoMirror15Bkgr_20250918) {
+      await updateItemDescription(itemId, truck_no_mirror_15_bkgr_html_20250918);
+    }
   //#region old functions
   // await deleteFieldFixedPriceItem(itemId, "Item.VideoDetails.VideoID");
   // await updatePictureDetailsFixedPriceItem_03CarWithNoMirror(itemId);
